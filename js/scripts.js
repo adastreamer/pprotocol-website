@@ -154,21 +154,12 @@ $(document).ready(function(){
 	})
 
 	$(document).scroll(function(){
-		var scrollPath = $('#protocol').offset().top/3;
+		var scrollPath = $('#protocol').offset().top - $('#protocol').height()/2;
 		console.log(scrollPath)
 		if($(document).scrollTop() >= scrollPath){
-			$('.main ~ .bottom-panel .moved-to-bottom-panel').removeClass('hide')
+			$('.bottom-panel .moved-to-bottom-panel').removeClass('hide')
 		}else{
-			$('.main ~ .bottom-panel .moved-to-bottom-panel').addClass('hide')
-		}
-
-		var footerPixelPath = $('footer').offset().top - $(window).height() - $('footer').outerHeight() + 18 + 106 + $('.bottom-panel').height();
-		if($(document).scrollTop() < footerPixelPath){
-			$('.last .button.moved-to-bottom-panel, .last.bottom-panel').css({'position':'fixed'})
-			$('.last .button.moved-to-bottom-panel').css({'bottom':'18px'})
-		}else{
-			$('.last .button.moved-to-bottom-panel, .last.bottom-panel').css({'position':'absolute'})
-			$('.last .button.moved-to-bottom-panel').css({'bottom':'0'})
+			$('.bottom-panel .moved-to-bottom-panel').addClass('hide')
 		}
 	})
 
