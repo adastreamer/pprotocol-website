@@ -980,7 +980,6 @@ footer.box{
 
 .main-image-box{
 	position: absolute;
-	animation: swim 1.8s infinite ease-in-out;
 }
 .main-image-box.b1{
 	top: 16%;
@@ -1061,7 +1060,6 @@ footer.box{
 	height: 196px;
 	background: url('../images/main-image-light.png') center;
 	background-size: contain;
-	animation: lightsOpacity 3s infinite linear;
 }
 .big ~ .main-image-box-light{
 	bottom: 103px;
@@ -1083,7 +1081,6 @@ footer.box{
 	height: 171px;
 	background: url('../images/main-image-baloons.png') 0 0;
 	background-size: contain;
-	animation: baloonsMove 8s infinite linear;
 }
 .main-image-box-icon{
 	position: absolute;
@@ -1101,123 +1098,6 @@ footer.box{
 	background: #97dcff;
 	border-radius: 50%;
 	box-shadow: 0 0 15px 8px #97dcff;
-	animation: coinMove 8s infinite linear;
-}
-
-/* Css animate */
-@keyframes swim {
-	0% {margin-top: -5px;}
-	50% {margin-top: 0px}
-	100% {margin-top: -5px}
-}
-
-@keyframes lightsOpacity {
-	0% {opacity: 0;}
-	50% {opacity: 1;}
-	100% {opacity: 0;}
-}
-
-@keyframes baloonsMove {
-	0% {background-position: 0 0;}
-	10% {background-position: -2px -17px;}
-	20% {background-position: 0 -34px;}
-	30% {background-position: 2px -51px;}
-	40% {background-position: 0 -68px;}
-	50% {background-position: -2px -85px;}
-	60% {background-position: 0 -102px;}
-	70% {background-position: 2px -119px;}
-	80% {background-position: 0 -136px;}
-	90% {background-position: -2px -153px;}
-	100% {background-position: 0 -170px;}
-}
-
-@keyframes coinMove {
-	0% {
-		top: 59%;
-		left: 30.2%;
-	}
-	10% {
-		top: 59%;
-		left: 30.2%;
-	}
-	20% {
-		top: 70.5%;
-		left: 44.2%;
-	}
-	21% {
-		top: 71%;
-		left: 44.9%;
-	}
-	22% {
-		top: 71%;
-		left: 45.5%;
-	}
-	23% {
-		top: 70.85%;
-		left: 46.5%;
-	}
-	24% {
-		top: 70.05%;
-		left: 47.5%;
-	}
-	34% {
-		top: 56.4%;
-		left: 64.2%;
-	}
-	44% {
-		top: 45.05%;
-		left: 78.0%;
-	}
-	45% {
-		top: 44.45%;
-		left: 78.5%;
-	}
-	46% {
-		top: 43.65%;
-		left: 78.6%;
-	}
-	47% {
-		top: 43.15%;
-		left: 78.3%;
-	}
-	57% {
-		top: 30.8%;
-		left: 63.6%;
-	}
-	58% {
-		top: 30.5%;
-		left: 63%;
-	}
-	59% {
-		top: 30.5%;
-		left: 62%;
-	}
-	60% {
-		top: 31%;
-		left: 61%;
-	}
-	70% {
-		top: 41.5%;
-		left: 48%;
-	}
-	85% {
-		top: 59.9%;
-		left: 26%;
-	}
-	90% {
-		top: 68.6%;
-		left: 15.3%;
-	}
-	99.9% {
-		top: 68.6%;
-		left: 15.3%;
-		display: none;
-	}
-	100%{
-		top: 59%;
-		left: 30.2%;
-		display: block;
-	}
 }
 /* Main> */
 
@@ -1360,19 +1240,6 @@ footer.box{
     right: -650px;
     margin: auto;
     transform: scale(.4);
-	animation: wave 7.5s infinite ease-in-out;
-}
-.protocol-wave.wave-1{
-	animation-delay: -1.5s;
-}
-.protocol-wave.wave-2{
-	animation-delay: -3s;
-}
-.protocol-wave.wave-3{
-	animation-delay: -4.5s;
-}
-.protocol-wave.wave-4{
-	animation-delay: -6s;
 }
 .protocol-image-text-1{
     position: absolute;
@@ -1429,20 +1296,6 @@ footer.box{
     letter-spacing: .8px;
     opacity: .9;
     text-align: center;
-}
-/* Css animate */
-@keyframes wave {
-	0%{
-	}
-	50%{
-		opacity: 1;
-		top: 48.5%;
-	}
-	100%{
-		top: 58.5%;
-		opacity: 0;
-		transform: scale(1.7);
-	}
 }
 
 .protocol-image-baloon{
@@ -1557,7 +1410,6 @@ footer.box{
     right: 12px;
     color: #fff;
     transition: all .3s;
-	animation: shadowButton 4s infinite linear;
 }
 .protocol-button img{
 	position: absolute;
@@ -1571,12 +1423,6 @@ footer.box{
 .protocol-button:hover{
 	opacity: .8;
 	text-decoration: none;
-}
-/* Css animate */
-@keyframes shadowButton {
-	0% {box-shadow: 0 0 0px 0 #ff48ba}
-	50% {box-shadow: 0 0 40px 5px #ff48ba}
-	100% {box-shadow: 0 0 0px 0 #ff48ba}
 }
 /* Protocol> */
 
@@ -2950,3 +2796,97 @@ footer.box{
 	}
 }
 /* Responsive> */
+
+
+/* <Animate */
+.go-animate .main-image-box{
+	animation: swim 1.8s infinite ease-in-out;
+}
+.go-animate .main-image-box-light::after{
+	animation: lightsOpacity 3s infinite linear;
+}
+.go-animate .main-image-box-light::before{
+	animation: baloonsMove 8s infinite linear;
+}
+.go-animate .main-image-coin{
+	animation: coinMove 8s infinite linear;
+}
+@keyframes swim{
+	0%{margin-top: -5px;}
+	50%{margin-top: 0px}
+	100%{margin-top: -5px}
+}
+
+@keyframes lightsOpacity{
+	0%{opacity: 0;}
+	50%{opacity: 1;}
+	100%{opacity: 0;}
+}
+
+@keyframes baloonsMove {
+	0%{background-position: 0 0;}
+	10%{background-position: -2px -17px;}
+	20%{background-position: 0 -34px;}
+	30%{background-position: 2px -51px;}
+	40%{background-position: 0 -68px;}
+	50%{background-position: -2px -85px;}
+	60%{background-position: 0 -102px;}
+	70%{background-position: 2px -119px;}
+	80%{background-position: 0 -136px;}
+	90%{background-position: -2px -153px;}
+	100%{background-position: 0 -170px;}
+}
+
+@keyframes coinMove{
+	0%{top: 59%; left: 30.2%;}
+	10%{top: 59%; left: 30.2%;}
+	20%{top: 70.5%; left: 44.2%;}
+	21%{top: 71%; left: 44.9%;}
+	22%{top: 71%; left: 45.5%;}
+	23%{top: 70.85%; left: 46.5%;}
+	24%{top: 70.05%; left: 47.5%;}
+	34%{top: 56.4%; left: 64.2%;}
+	44%{top: 45.05%; left: 78.0%;}
+	45%{top: 44.45%; left: 78.5%;}
+	46%{top: 43.65%; left: 78.6%;}
+	47%{top: 43.15%; left: 78.3%;}
+	57%{top: 30.8%; left: 63.6%;}
+	58%{top: 30.5%; left: 63%;}
+	59%{top: 30.5%; left: 62%;}
+	60%{top: 31%; left: 61%;}
+	70%{top: 41.5%; left: 48%;}
+	85%{top: 59.9%; left: 26%;}
+	90%{top: 68.6%; left: 15.3%;}
+	99.9%{top: 68.6%; left: 15.3%; display: none;}
+	100%{top: 59%; left: 30.2%; display: block;}
+}
+
+.go-animate .protocol-wave{
+	animation: wave 7.5s infinite ease-in-out;
+}
+.protocol-wave.wave-1{
+	animation-delay: -1.5s;
+}
+.protocol-wave.wave-2{
+	animation-delay: -3s;
+}
+.protocol-wave.wave-3{
+	animation-delay: -4.5s;
+}
+.protocol-wave.wave-4{
+	animation-delay: -6s;
+}
+@keyframes wave{
+	0%{}
+	50%{opacity: 1; top: 48.5%;}
+	100%{top: 58.5%; opacity: 0; transform: scale(1.7);}
+}
+.go-animate .protocol-button{
+	animation: shadowButton 4s infinite linear;
+}
+@keyframes shadowButton{
+	0%{box-shadow: 0 0 0px 0 #ff48ba}
+	50%{box-shadow: 0 0 40px 5px #ff48ba}
+	100%{box-shadow: 0 0 0px 0 #ff48ba}
+}
+/* Animate> */

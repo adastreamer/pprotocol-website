@@ -1,21 +1,4 @@
 $(document).ready(function(){
-	$('sbody').on('click', function(e){
-		e.preventDefault();
-		$('body').css({'position':'relative'}).append('<img alt="" src="images/layer.png" class="layer"><!-- Если хотите убрать эту херню, просто удалите кусочек кода в scripts.js -->')
-		$('.layer').css({
-			'position': 'absolute',
-			'top': '-376px',
-			'left': '0px',
-			'right': '0px',
-			'margin': '0 auto',
-			'opacity': '0.6',
-            'z-index': '666'
-		}).on('click', function(){
-			$(this).remove();
-		});
-	});
-
-	
 	$('.roadmap-slider').slick({
 		speed: 300,
 		slidesToShow: 3,
@@ -155,7 +138,6 @@ $(document).ready(function(){
 
 	$(document).scroll(function(){
 		var scrollPath = $('#protocol').offset().top - $('#protocol').height()/2;
-		console.log(scrollPath)
 		if($(document).scrollTop() >= scrollPath){
 			$('.bottom-panel .moved-to-bottom-panel').removeClass('hide')
 		}else{
@@ -164,4 +146,18 @@ $(document).ready(function(){
 	})
 
 	$('.js-fancybox').fancybox();
+
+
+	// Включаем и отключаем анимации при скроле
+	$(document).scroll(function(){
+		$('.box').each(function(){
+			box = $(this);
+
+			if($(document).scrollTop()>box.offset().top-1 - box.height() & $(document).scrollTop()<box.offset().top+1 + box.height()){
+				box.addClass('go-animate');
+			}else{
+				box.removeClass('go-animate');
+			}
+		});
+	});
 });
