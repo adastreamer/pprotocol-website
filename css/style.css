@@ -100,7 +100,7 @@ strong{
 	display: block;
 }
 .box{
-	min-height: 1080px;
+	height: 100vh;
 	min-height: 100vh;
 	max-width: 1396px;
 	width: 100%;
@@ -835,6 +835,7 @@ input[type="checkbox"]:checked{
 /* <Header & Footer */
 header.box{
 	min-height: 0;
+	height: auto;
 	position: absolute;
 	top: 30px;
 	right: 0;
