@@ -152,15 +152,11 @@ button:focus{
 .colored-bg{
 	position: relative;
 	color: #fff;
-	/*
-	background: rgb(189,25,170);
-	background: -moz-linear-gradient(45deg, rgba(189,25,170,1) 0%, rgba(87,88,253,1) 100%);
-	background: -webkit-linear-gradient(45deg, rgba(189,25,170,1) 0%,rgba(87,88,253,1) 100%);
-	background: linear-gradient(45deg, rgba(189,25,170,1) 0%,rgba(87,88,253,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd19aa', endColorstr='#5758fd',GradientType=1 );
-	*/
-	background: url('../images/colored-image-1.png') center no-repeat;
-	background-size: cover;
+	background: #c11ba4;
+	background: -moz-linear-gradient(45deg, #c11ba4 0%, #9a07e7 55%, #525ffd 100%);
+	background: -webkit-linear-gradient(45deg, #c11ba4 0%,#9a07e7 55%,#525ffd 100%);
+	background: linear-gradient(45deg, #c11ba4 0%,#9a07e7 55%,#525ffd 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c11ba4', endColorstr='#525ffd',GradientType=1 );
 }
 .colored-bg.v2{
 	/*
@@ -249,7 +245,7 @@ button:focus{
 	box-sizing: border-box;
 	border-radius: 40px;
 	position: relative;
-	transition: all .3s;
+	transition: all .2s;
 }
 .button:hover{
 	text-decoration: none;
@@ -272,6 +268,9 @@ button:focus{
 	background: #fff;
 	color: #000;
 	box-shadow: 0 0 20px 0 rgba(255,255,255,.8), -12px 8px 20px -5px rgba(0,0,1,.5);
+}
+.button.white:hover{
+	background: #efefef;
 }
 .button.blue{
 	background: #97dcff;
@@ -441,6 +440,9 @@ input[type="checkbox"]:checked{
 	border-right-width: 7px;
 	border-top-color: #fff;
 	margin: 0 0 -1px 3px;
+}
+.dropdown-button:hover .dropdown-button-tri{
+	border-top-color: #5d4dfd;
 }
 .dropdown-button .icon{
 	margin: 2px 3px -2px 0;
@@ -622,6 +624,13 @@ input[type="checkbox"]:checked{
 .top-gradient-bg .blot-10{
 	top: -217px;
 	bottom: auto;
+}
+.blot-11{
+	top: 240px;
+	right: 70.5%;
+	width: 561px;
+	height: 1020px;
+	background: url('../images/figures/blot-11.png') center no-repeat;
 }
 .rect{
 	position: absolute;
@@ -865,6 +874,7 @@ header.box{
 	border-radius: 40px;
     padding: 5px 15px 6px;
 	text-align: center;
+	transition: all .2s;
 }
 .header-nav-list-item a:hover,
 .header-nav-list-item a.current{
@@ -1486,7 +1496,7 @@ footer.box{
 	padding-top: 82px;
 }
 .graph::before{
-    content: '';
+content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -1495,14 +1505,41 @@ footer.box{
     margin: auto;
     width: 420px;
     height: 420px;
-    background: rgba(255,255,255,.8);
+    background: rgba(255,255,255,1);
     border-radius: 50%;
-    -webkit-filter: blur(90px);
-    -moz-filter: blur(90px);
-    filter: blur(40px);
+    -webkit-filter: blur(60px);
+    -moz-filter: blur(60px);
+    filter: blur(60px);
 }
 .graph-text{}
 .graph-text-box{}
+
+.diag{
+	width: 420px;
+	height: 420px;
+	overflow: hidden;
+	border-radius: 50%;
+	position: relative;
+	margin: auto;
+}
+.sector{
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform-origin: left bottom;
+}
+.diag::after {
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	background: #f9e9fd;
+	border-radius: 50%;
+	top: 25%;
+	left: 25%;
+}
 /* Tokensale> */
 
 
@@ -2333,6 +2370,11 @@ footer.box{
 		left: 0;
 		width: 182px;
 		height: 328px;
+	}
+	.blot-11{
+		top: 500px;
+		width: 360px;
+		height: 420px;
 	}
 	.rect-1{
 		width: 45px;

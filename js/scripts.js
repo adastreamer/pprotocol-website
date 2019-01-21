@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	// Slick slider
 	$('.roadmap-slider').slick({
 		speed: 300,
 		slidesToShow: 3,
@@ -22,47 +23,6 @@ $(document).ready(function(){
 	$('.roadmap-slider').on('afterChange', function(){
 		$('.roadmap-container > .first-title').html($('.roadmap-slide.slick-current .first-title').html())
 	})
-
-	new Chart(document.getElementById("doughnut-chart-1"), {
-	    type: 'doughnut',
-	    data: {
-	      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
-	      display: false,
-	      datasets: [
-	        {
-	          label: "Population (millions)",
-	          backgroundColor: ["#7fbff1", "#c73ce8","#993ecb","#a53be8","#ec69ef"],
-	          data: [35,30,15,10,10],
-	          borderWidth: 0
-	        }
-	      ]
-	    },
-	    options: {
-	    	legend: {
-		        display: false
-		    }
-	    }
-	});
-	new Chart(document.getElementById("doughnut-chart-2"), {
-	    type: 'doughnut',
-	    data: {
-	      labels: ["Africa", "Asia", "Europe", "Latin America"],
-	      display: false,
-	      datasets: [
-	        {
-	          label: "Population (millions)",
-	          backgroundColor: ["#a142e9", "#e86ff0","#50c9ef","#ac43cd"],
-	          data: [3,4,2,16],
-	          borderWidth: 0
-	        }
-	      ]
-	    },
-	    options: {
-	    	legend: {
-		        display: false
-		    }
-	    }
-	});
 
 	$('.team-slider').slick({
 	    slidesToShow: 3,
@@ -88,6 +48,8 @@ $(document).ready(function(){
 	    ]
 	});
 
+
+	// Scroll menu
 	$('.page-scroller').alfaNavbar({ type: 'dotted'});
 
 	fixPagerScroller = function(){
@@ -99,43 +61,22 @@ $(document).ready(function(){
 		fixPagerScroller();
 	})
 
+
+	// Header mobile button
 	$('.header-nav-button').on('click', function(){
 		$(this).toggleClass('open')
 	})
 
 
-	var i=0;
-	var interval = setInterval(function(){
-		$('.tokensale-graph-part:eq('+i+')').addClass('go')
-	   	i++;
-	   	if (i==$('.tokensale-graph-part').size())
-	     	clearInterval(interval);
-	}, 600)
-
-	setInterval(function(){
-		var i=0;
-		var interval = setInterval(function(){
-			$('.tokensale-graph-part:eq('+i+')').addClass('go')
-		   	i++;
-		   	if (i==$('.tokensale-graph-part').size())
-		     	clearInterval(interval);
-		}, 600)
-
-		setTimeout(function(){
-			$('.tokensale-graph-part').addClass('out');
-		}, 8000)
-		setTimeout(function(){
-			$('.tokensale-graph-part').removeClass('out').removeClass('go');
-		}, 9000)
-	}, 10000)
-
-
+	// Header dropdown button
 	$('.dropdown-button').on('click', function(e){
 		e.preventDefault();
 
 		$(this).parent().find('.dropdown').slideToggle('fast')
 	})
 
+
+	// Show button when scrolled
 	$(document).scroll(function(){
 		var scrollPath = $('#protocol').offset().top - $('#protocol').height()/2;
 		if($(document).scrollTop() >= scrollPath){
@@ -145,6 +86,8 @@ $(document).ready(function(){
 		}
 	})
 
+
+	// Fancybox
 	$('.js-fancybox').fancybox();
 
 
@@ -160,4 +103,101 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+
+	// Рисуем диаграммы
+	if($('.graph').length){
+		setTimeout(function(){
+			// <Graph 1
+			var dataset = [
+				{value: 35, color: '#7fbff1'}, 
+				{value: 30, color: '#c73ce8'}, 
+				{value: 16, color: '#993ecb'}, 
+				{value: 9, color: '#a53be8'}, 
+				{value: 10,color: '#ec69ef'}
+			];
+
+			var maxValue = 25;
+			var container = $('.diag-1');
+
+			var addSector = function(data, startAngle, collapse){
+				var sectorDeg = 3.6 * data.value;
+				var skewDeg = 90 + sectorDeg;
+				var rotateDeg = startAngle;
+				if (collapse){skewDeg++}
+
+				var sector = $('<div>',{
+			    	'class': 'sector'
+				}).css({
+			    	'background': data.color,
+			    	'transform': 'rotate(' + rotateDeg + 'deg) skewY(' + skewDeg + 'deg)'
+				});
+				container.append(sector);
+
+				return startAngle + sectorDeg;
+			};
+
+			dataset.reduce(function (prev, curr){
+				return (function addPart(data, angle){
+				    if (data.value <= maxValue){
+						return addSector(data, angle, false);
+				    }
+
+				    return addPart({
+						value: data.value - maxValue,
+						color: data.color
+				    }, addSector({
+						value: maxValue,
+						color: data.color,
+				    }, angle, true));
+				})(curr, prev);
+			}, 0);
+			// Graph1>
+
+			// <Graph 2
+			var dataset = [
+				{value: 12, color: '#a142e9'}, 
+				{value: 16, color: '#e86ff0'}, 
+				{value: 8, color: '#50c9ef'}, 
+				{value: 64, color: '#ac43cd'}
+			];
+
+			var maxValue = 25;
+			var container = $('.diag-2');
+
+			var addSector = function(data, startAngle, collapse){
+				var sectorDeg = 3.6 * data.value;
+				var skewDeg = 90 + sectorDeg;
+				var rotateDeg = startAngle;
+				if (collapse){skewDeg++}
+
+				var sector = $('<div>',{
+			    	'class': 'sector'
+				}).css({
+			    	'background': data.color,
+			    	'transform': 'rotate(' + rotateDeg + 'deg) skewY(' + skewDeg + 'deg)'
+				});
+				container.append(sector);
+
+				return startAngle + sectorDeg;
+			};
+
+			dataset.reduce(function (prev, curr){
+				return (function addPart(data, angle){
+			    	if (data.value <= maxValue){
+			      		return addSector(data, angle, false);
+			    	}
+
+			    	return addPart({
+			      		value: data.value - maxValue,
+			      		color: data.color
+			    	}, addSector({
+			      		value: maxValue,
+			      		color: data.color,
+			    	}, angle, true));
+				})(curr, prev);
+			}, 0);
+			// Graph2>
+		}, 100)
+	}
 });
