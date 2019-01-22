@@ -850,6 +850,7 @@ header.box{
 
 .nav-wrapper{
 	min-height: 0;
+	height: auto;
 	position: absolute;
 	top: 48px;
 	right: 0;
