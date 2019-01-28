@@ -1441,6 +1441,9 @@ footer.box{
 
 /* <Tokensale */
 .tokensale{}
+.tokensale .box-cell{
+	vertical-align: middle;
+}
 .graph-wrapper{
 	text-align: center;
 	color: #3e2062;
@@ -1546,7 +1549,9 @@ content: '';
 
 
 /* <Roadmap */
-.roadmap{}
+.roadmap .box-cell{
+	vertical-align: middle;
+}
 .roadmap-container{
 	background: rgba(255,255,255,.4);
 	box-shadow: -10px 10px 60px 0 rgba(0,0,0,.3);
@@ -1702,12 +1707,8 @@ content: '';
 .team-slide{
 	float: left;
 	position: relative;
-	background: #fff;
-	box-shadow: 0 0 40px 12px rgba(161, 130, 185, 0.4);
-	border-radius: 38px;
-	padding: 28px 37px 36px;
 	box-sizing: border-box;
-	margin: 36px;
+	margin: 36px 60px;
 }
 .team-social{
 	position: absolute;
@@ -1716,28 +1717,37 @@ content: '';
 }
 .team-social .icon{}
 .team-image{
-	height: 230px;
-	margin-bottom: 22px;
+	width: 191px;
+	height: 191px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto 22px;
 }
 .team-image img{
-	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	margin: auto;
 	max-width: 100%;
 	max-height: 100%;
 }
 .team-name{
 	text-align: center;
-	font: 32px/40px 'PFDinDisplayPro Bold', 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
+	font: 32px/40px 'PFDinDisplayPro Medium', 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
 }
 .team-type{
 	text-align: center;
 	color: #6a6a6a;
-	font: 28.99px 'PFDinDisplayPro Bold', 'Open Sans', Arial, Helvetica, sans-serif;
+	min-height: 48px;
+	font: 29px/20px 'PFDinDisplayPro Medium', 'Open Sans', Arial, Helvetica, sans-serif;
 }
 .team-description{
 	color: #6a6a6a;
-	font: 28.99px/27px 'PFDinDisplayPro Light', 'Open Sans', Arial, Helvetica, sans-serif;
-	padding-top: 12px;
+	font: 29px/27px 'PFDinDisplayPro Light', 'Open Sans', Arial, Helvetica, sans-serif;
+	text-align: justify;
 }
 .team .slick-arrow{
 	position: absolute;
@@ -1896,6 +1906,9 @@ content: '';
 @media (max-width: 1500px){
 	.protocol-image-wrapper{
 		transform: scale(.9)
+	}
+	.team-slider-wrapper{
+		padding: 0;
 	}
 }
 @media (max-width: 1200px){
@@ -2389,6 +2402,10 @@ content: '';
 	.top-gradient-bg .blot-10{
 		top: -141px;
 	}
+
+	.team-slide{
+		margin: 36px 0;
+	}
 }
 @media (max-width: 600px){
 	.protocol .box-cell{
@@ -2523,6 +2540,10 @@ content: '';
 	    transform: scale(.25);
 	    margin: -150px -100px -100px -156px;
 	}
+
+	.team-slide{
+		margin-bottom: 0;
+	}
 }
 @media (max-width: 400px){
 	body .main-image-wrapper{
@@ -2629,11 +2650,6 @@ content: '';
 	.partners-list-item{
 		margin-bottom: 100px;
 	}
-	.team-slide{
-		margin: 26px;
-		padding: 24px 32px 30px;
-		box-shadow: 0 0 30px 10px rgba(161, 130, 185, 0.4);
-	}
 	.team-image{
 		height: 190px;
 		margin-bottom: 15px;
@@ -2647,6 +2663,7 @@ content: '';
 	.team-description{
 		font-size: 24px;
 		line-height: 24px;
+		text-align: center;
 	}
 	footer.box{
 		padding: 54px 0 44px;
@@ -2735,14 +2752,16 @@ content: '';
 	.partners-list-item{
 		margin: 0 0 40px 0;
 	}
-	.team-slide{
-		padding: 14px 22px 20px;
-	}
 	.team-image{
 		height: 160px;
+		width: 160px;
 	}
 	.team-name{
 		font-size: 26px;
+	}
+	.team-type{
+		min-height: 0;
+		margin-bottom: 8px;
 	}
 	.team-type{
 		font-size: 22px;
