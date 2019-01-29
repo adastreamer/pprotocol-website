@@ -1716,8 +1716,8 @@ content: '';
 }
 .team-social .icon{}
 .team-image{
-	width: 191px;
-	height: 191px;
+	width: 120px;
+	height: 120px;
 	border-radius: 50%;
 	overflow: hidden;
 	position: relative;
@@ -1741,11 +1741,11 @@ content: '';
 	text-align: center;
 	color: #6a6a6a;
 	min-height: 48px;
-	font: 29px/20px 'PFDinDisplayPro Medium', 'Open Sans', Arial, Helvetica, sans-serif;
+	font: 28px/20px 'PFDinDisplayPro Medium', 'Open Sans', Arial, Helvetica, sans-serif;
 }
 .team-description{
 	color: #6a6a6a;
-	font: 29px/27px 'PFDinDisplayPro Light', 'Open Sans', Arial, Helvetica, sans-serif;
+	font: 28px/27px 'PFDinDisplayPro Light', 'Open Sans', Arial, Helvetica, sans-serif;
 	text-align: justify;
 }
 .team .slick-arrow{
