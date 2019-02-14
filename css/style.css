@@ -219,10 +219,24 @@ button:focus{
 	background-image: url('../images/icons/lin-icon.jpg');
 }
 .teleg-icon{
-	width: 49px;
-	height: 49px;
+	width: 60px;
+	height: 60px;
 	background-image: url('../images/icons/teleg-icon.png');
 	background-size: contain;
+	position: relative;
+}
+.teleg-icon::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 10px solid rgba(151, 220, 255, .9);
+    border-radius: 50%;
+    opacity: 1;
+
+    animation: borderButton 1s infinite linear;
 }
 .documents-icon{
 	width: 36px;
@@ -263,6 +277,10 @@ button:focus{
 .button.block{
 	display: block;
 	width: 100%;
+}
+.button.big{
+	padding-top: 20px;
+	padding-bottom: 21px;
 }
 .button.white{
 	background: #fff;
@@ -803,7 +821,7 @@ input[type="checkbox"]:checked{
 .bottom-panel-button .icon{
 	display: inline-block;
 	vertical-align: middle;
-	margin: -6px 20px 0 0;
+	margin: -16px 20px 0 0;
 }
 .bottom-panel-button + .bottom-panel-button{
 	left: 119px;	
@@ -813,7 +831,7 @@ input[type="checkbox"]:checked{
 	bottom: 18px;
 	left: 0;
 	right: 0;
-    max-width: 245px;
+    max-width: 300px;
     margin: auto;
     z-index: 23;
     background: #97dcff;
@@ -1802,7 +1820,9 @@ content: '';
 
 
 /* <Social */
-.social{}
+.social .box-cell{
+	vertical-align: middle;
+}
 .socials-list{
 	overflow: hidden;
 	text-align: center;
@@ -2512,11 +2532,12 @@ content: '';
 	}
 	body .main-form{
 		z-index: 1;
+		z-index: 23;
 		position: relative;
 	}
 	body .main-form,
 	.button.moved-to-bottom-panel{
-		max-width: 175px;
+		max-width: 200px;
 	}
 	.button.moved-to-bottom-panel{
 		white-space: nowrap;
@@ -2525,11 +2546,11 @@ content: '';
 		margin-bottom: 10px;
 	}
 	body .main-form .form-box:nth-child(2){
-		width: 99px;
+		width: 114px;
 		margin-right: 10px;
 	}
 	body .main-form .form-box:nth-child(3){
-		width: 66px;
+		width: 76px;
 	}
 
 	body .graph-wrapper{
@@ -2950,5 +2971,10 @@ content: '';
 	0%{box-shadow: 0 0 0px 0 #ff48ba}
 	50%{box-shadow: 0 0 40px 5px #ff48ba}
 	100%{box-shadow: 0 0 0px 0 #ff48ba}
+}
+@keyframes borderButton{
+	0%{top: 0; right: 0; bottom: 0; left: 0; opacity: 1;}
+	50%{top: -5px; right: -5px; bottom: -5px; left: -5px;}
+	100%{top: -10px; right: -10px; bottom: -10px; left: -10px; opacity: 0;}
 }
 /* Animate> */
