@@ -865,6 +865,13 @@ input[type="checkbox"]:checked{
 .mshow{
 	display: none;
 }
+
+.typing-wrapper{
+	transform: scaleY(1.15);
+    line-height: 24px;
+    text-transform: uppercase;
+	font-family: 'Gill Sans MT';
+}
 /* Common styles> */
 
 
