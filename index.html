@@ -565,7 +565,7 @@
 		</div>
 	</div>
 
-	<div class="popup large" id="connect-popup">
+	<form action="https://pprotocol.io/requests" method="POST" class="popup large" id="connect-popup">
 		<div class="popup-title">신청서</div>
 		<div class="form">
 			<div class="form-box">
@@ -573,7 +573,7 @@
 					자기 이름
 				</div>
 				<div class="form-box-container">
-					<input type="text" name="" required>
+					<input type="text" name="request[name]" required>
 				</div>
 			</div>
 			<div class="form-box">
@@ -581,7 +581,7 @@
 					이메일
 				</div>
 				<div class="form-box-container">
-					<input type="text" name="" required>
+					<input type="email" name="request[email]" required>
 				</div>
 			</div>
 			<div class="form-box">
@@ -589,7 +589,7 @@
 					국적
 				</div>
 				<div class="form-box-container">
-					<input type="text" name="">
+					<input type="text" name="request[country]">
 				</div>
 			</div>
 			<div class="form-box">
@@ -597,7 +597,7 @@
 					회사명을 쓰십시오
 				</div>
 				<div class="form-box-container">
-					<input type="text" name="">
+					<input type="text" name="request[company]">
 				</div>
 			</div>
 			<div class="form-box form-help">
@@ -625,11 +625,11 @@
 			</div>
 			<div class="form-box">
 				<div class="form-box-container">
-					<input type="submit" name="" value="Send" class="button">
+					<input type="submit" name="" value="Send" class="button" id="submit-request">
 				</div>
 			</div>
 		</div>
-	</div>
+	</form>
 	<!-- Popups> -->
 
 

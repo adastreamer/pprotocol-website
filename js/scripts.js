@@ -217,4 +217,39 @@ $(document).ready(function(){
 			loop: true
 		});
 	}
+
+	var connectPopupFormSelector = '#connect-popup';
+	var submitRequestButtonSelector = '#submit-request';
+	var $connectPopupForm = $(connectPopupFormSelector);
+	var $submitRequestButton = $(submitRequestButtonSelector);
+	var submitRequestInProgress = false;
+	var submitRequestButtonLoadingMessage = "Loading...";
+	$connectPopupForm.submit(function(e){
+		e.preventDefault();
+		if (submitRequestInProgress == true) return false;
+		submitRequestInProgress = true;
+		var submitButtonValue = $submitRequestButton.val();
+		$submitRequestButton.val(submitRequestButtonLoadingMessage);
+		var $form = $(this);
+		var formDom = this;
+		var data = $form.serialize();
+		$.ajax({
+			url: $form.attr('action'),
+			method: $form.attr('method'),
+			data: data,
+			success: function(data){
+				alert("Success! Thank you!");
+				formDom.reset();
+				submitRequestInProgress = false;
+				$submitRequestButton.val(submitButtonValue);
+				$.fancybox.close();
+			},
+			error: function(err){
+				alert("Error, try again later!");
+				submitRequestInProgress = false;
+				$submitRequestButton.val(submitButtonValue);
+			}
+		});
+		return false;
+	});
 });
