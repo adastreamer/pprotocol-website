@@ -405,8 +405,8 @@ input[type="checkbox"]:checked{
 
 .start-box{
     position: absolute;
-    top: 10vw;
-    left: 25vw;
+    top: 7vw;
+    left: 22vw;
     display: flex;
     align-items: center;
     font-size: 28px;
