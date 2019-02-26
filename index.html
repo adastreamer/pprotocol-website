@@ -122,7 +122,7 @@
 					<div class="form main-form">
 						<div class="form-box">
 							<div class="form-box-container js-to-bottom-panel">
-								<a href="/users/sign_in" class="button white block big">개인적 판매에 참여하다</a>
+								<a href="#investment-popup" data-fancybox class="button white block big">개인적 판매에 참여하다</a>
 							</div>
 						</div>
 						<div class="form-box">
@@ -565,7 +565,7 @@
 		</div>
 	</div>
 
-	<form action="https://pprotocol.io/requests" method="POST" class="popup large" id="connect-popup">
+	<form action="https://pprotocol.io/requests" method="POST" class="popup large submit-popup" id="connect-popup">
 		<div class="popup-title">신청서</div>
 		<div class="form">
 			<div class="form-box">
@@ -625,7 +625,42 @@
 			</div>
 			<div class="form-box">
 				<div class="form-box-container">
-					<input type="submit" name="" value="Send" class="button" id="submit-request">
+					<input type="submit" name="" value="Send" class="button submit-request">
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<form action="https://pprotocol.io/request_investments" method="POST" class="popup large submit-popup" id="investment-popup">
+		<div class="popup-title">개인적 판매에 참여하다</div>
+		<div class="form">
+			<div class="form-box">
+				<div class="form-box-title">
+					자기 이름
+				</div>
+				<div class="form-box-container">
+					<input type="text" name="request_investments[name]" required>
+				</div>
+			</div>
+			<div class="form-box">
+				<div class="form-box-title">
+					이메일
+				</div>
+				<div class="form-box-container">
+					<input type="email" name="request_investments[email]" required>
+				</div>
+			</div>
+			<div class="form-box">
+				<div class="form-box-title">
+					Amount
+				</div>
+				<div class="form-box-container">
+					<input type="text" name="request_investments[amount]">
+				</div>
+			</div>
+			<div class="form-box">
+				<div class="form-box-container">
+					<input type="submit" name="" value="Send" class="button submit-request">
 				</div>
 			</div>
 		</div>

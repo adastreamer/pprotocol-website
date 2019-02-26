@@ -218,8 +218,8 @@ $(document).ready(function(){
 		});
 	}
 
-	var connectPopupFormSelector = '#connect-popup';
-	var submitRequestButtonSelector = '#submit-request';
+	var connectPopupFormSelector = '.submit-popup';
+	var submitRequestButtonSelector = '.submit-request';
 	var $connectPopupForm = $(connectPopupFormSelector);
 	var $submitRequestButton = $(submitRequestButtonSelector);
 	var submitRequestInProgress = false;
