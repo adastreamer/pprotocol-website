@@ -202,22 +202,7 @@ $(document).ready(function(){
 	}
 
 
-	if($('.typing').hasClass('en')){
-		var typed = new Typed('.typing', {
-			strings: ["Public tokensale <br>starts in April"],
-			typeSpeed: 90,
-			backSpeed: 30,
-			loop: true
-		});
-	}else if($('.typing').hasClass('kr')){
-		var typed = new Typed('.typing', {
-			strings: ["공개 토큰 <br>4 월에 시작됩니다"],
-			typeSpeed: 90,
-			backSpeed: 30,
-			loop: true
-		});
-	}
-
+	// Обработка формы
 	var connectPopupFormSelector = '.submit-popup';
 	var submitRequestButtonSelector = '.submit-request';
 	var $connectPopupForm = $(connectPopupFormSelector);

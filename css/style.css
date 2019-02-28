@@ -66,7 +66,6 @@ strong{
 	margin-bottom: 82px;
 	font-family: 'PFDinDisplayPro Bold', 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
 }
-.second-title{}
 .box-title{
 	color: #3e2062;
 	opacity: .1;
@@ -363,7 +362,6 @@ input[type="color"]:focus{
 .form-box.last{
 	margin: 91px 0 0 0;
 }
-.form-box-container{}
 .form-box-container + .form-box-container{
 	margin-top: 12px;
 }
@@ -412,6 +410,8 @@ input[type="checkbox"]:checked{
     display: flex;
     align-items: center;
     font-size: 28px;
+    line-height: 32px;
+    text-transform: uppercase;
 }
 .start-box svg{
 	float: left;
@@ -440,15 +440,13 @@ input[type="checkbox"]:checked{
 .popup-title:first-child{
 	margin-top: -10px;
 }
-.popup .form{}
 .popup .form-box:last-child{
 	margin: 0;
 }
-.popup .form-box-container{}
 .popup .form-box-container input[type="text"],
 .popup .form-box-container input[type="email"]{
     color: #000;
-    padding: 10px 8px 12px;
+    padding: 0 8px;
     height: 42px;
 }
 .popup .form-box-container .button{
@@ -468,7 +466,6 @@ input[type="checkbox"]:checked{
 	position: relative;
 }
 
-.dropdown-button{}
 .dropdown-button-tri{
 	display: inline-block;
 	vertical-align: bottom;
@@ -868,13 +865,6 @@ input[type="checkbox"]:checked{
 .mshow{
 	display: none;
 }
-
-.typing-wrapper{
-	transform: scaleY(1.15);
-    line-height: 24px;
-    text-transform: uppercase;
-	font-family: 'Gill Sans MT';
-}
 /* Common styles> */
 
 
@@ -892,7 +882,6 @@ header.box{
 	position: relative;
 	z-index: 11;
 }
-.page-logo img{}
 
 .nav-wrapper{
 	min-height: 0;
@@ -909,7 +898,6 @@ header.box{
 	position: relative;
 	float: right;
 }
-.header-nav-list{}
 .header-nav-list-item{
 	display: inline-block;
 	vertical-align: top;
@@ -1183,7 +1171,6 @@ footer.box{
 .about .box-cell{
 	vertical-align: middle;
 }
-.about .split{}
 .about .split-col{
 	width: auto;
 	position: relative;
@@ -1253,7 +1240,6 @@ footer.box{
 	background-size: contain;
 	top: 26%;
 	left: 37%;
-	animation: swim 2s infinite ease-in-out;
 }
 .protocol-image-button{
 	position: absolute;
@@ -1469,6 +1455,21 @@ footer.box{
     color: #fff;
     transition: all .3s;
 }
+.protocol-button::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    border: 40px solid #ff48ba;
+    border-radius: 50%;
+    -webkit-filter: blur(8px);
+    -moz-filter: blur(8px);
+    filter: blur(8px);
+    opacity: .8;
+    z-index: -1;
+}
 .protocol-button img{
 	position: absolute;
 	top: -38px;
@@ -1479,7 +1480,7 @@ footer.box{
 	margin: auto;
 }
 .protocol-button:hover{
-	opacity: .8;
+	background: #ddcdf7;
 	text-decoration: none;
 }
 /* Protocol> */
@@ -1561,8 +1562,6 @@ content: '';
     -moz-filter: blur(60px);
     filter: blur(60px);
 }
-.graph-text{}
-.graph-text-box{}
 
 .diag{
 	width: 420px;
@@ -1683,7 +1682,6 @@ content: '';
     border-left-width: 20px;
     transform: rotate(90deg);
 }
-.roadmap-slide .first-title{}
 .roadmap-slide .first-title + .roadmap-slider-box{
 	margin: 0;
 }
@@ -1739,7 +1737,6 @@ content: '';
 
 
 /* <Team */
-.team{}
 .team-slider-wrapper{
 	padding: 0 40px;
 }
@@ -1760,7 +1757,6 @@ content: '';
 	top: 27px;
 	right: 39px;
 }
-.team-social .icon{}
 .team-image{
 	width: 120px;
 	height: 120px;
@@ -1820,17 +1816,13 @@ content: '';
 
 
 /* <News */
-.news{}
-.news-list{
-	padding-top: 55px;
-}
 .news-list-item{
 	width: 30.6%;
 	margin-bottom: 62px;
 }
 .news-list-item.big{
 	width: auto;
-	margin: 0 200px;
+	margin: 0 210px;
 }
 .news-list-item.big ~ .news-list-item{
 
@@ -1857,7 +1849,6 @@ content: '';
 
 
 /* <Social */
-.social .box-cell{}
 .socials-list{
 	overflow: hidden;
 	text-align: center;
@@ -2046,7 +2037,6 @@ content: '';
 		max-width: 100%;
 		margin: 0 auto;
 	}
-	.news-list-item.big .video{}
 }
 @media (max-width: 1060px){
 	.header-nav-list-item{
@@ -2261,7 +2251,6 @@ content: '';
 		right: 40px;
 	}
 
-	.tokensale{}
 	.tokensale .split{
 		display: block;
 	}
@@ -2935,7 +2924,6 @@ content: '';
 		font-size: 20px;
 	}
 
-	.socials-list{}
 
 	.bottom-panel{
 		bottom: 12px;
@@ -2971,6 +2959,9 @@ content: '';
 }
 .go-animate .main-image-coin{
 	animation: coinMove 8s infinite linear;
+}
+.go-animate .protocol-image-coin{
+	animation: swim 2s infinite ease-in-out;
 }
 @keyframes swim{
 	0%{margin-top: -5px;}
@@ -3038,17 +3029,16 @@ content: '';
 	animation-delay: -6s;
 }
 @keyframes wave{
-	0%{}
 	50%{opacity: 1; top: 48.5%;}
 	100%{top: 58.5%; opacity: 0; transform: scale(1.7);}
 }
-.go-animate .protocol-button{
-	animation: shadowButton 4s infinite linear;
+.go-animate .protocol-button::before{
+	animation: shadowButton 2s infinite linear;
 }
 @keyframes shadowButton{
-	0%{box-shadow: 0 0 0px 0 #ff48ba}
-	50%{box-shadow: 0 0 40px 5px #ff48ba}
-	100%{box-shadow: 0 0 0px 0 #ff48ba}
+	0%{margin: -12px}
+	50%{margin: 0}
+	100%{margin: -12px}
 }
 @keyframes borderButton{
 	0%{top: 0; right: 0; bottom: 0; left: 0; opacity: 1;}
