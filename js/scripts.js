@@ -24,7 +24,7 @@ $(document).ready(function(){
 		$('.roadmap-container > .first-title').html($('.roadmap-slide.slick-current .first-title').html())
 	})
 
-	$('.team-slider').slick({
+	$('._team-slider').slick({
 	    slidesToShow: 3,
 	    responsive: [
 	        {
