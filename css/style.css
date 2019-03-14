@@ -2785,7 +2785,6 @@ content: '';
 		margin-bottom: 100px;
 	}
 	.team-image{
-		height: 190px;
 		margin-bottom: 15px;
 	}
 	.team-name{
@@ -2885,10 +2884,6 @@ content: '';
 	}
 	.partners-list-item{
 		margin: 0 0 40px 0;
-	}
-	.team-image{
-		height: 160px;
-		width: 160px;
 	}
 	.team-name{
 		font-size: 26px;
