@@ -26,26 +26,44 @@ $(document).ready(function(){
 
 	$('._team-slider').slick({
 	    slidesToShow: 3,
+	    infinite: false,
 	    responsive: [
 	        {
-		        breakpoint: 1200,
+		        breakpoint: 1000,
 		        settings: {
 		            slidesToShow: 2
 		        }
 	        },
 	        {
-		        breakpoint: 900,
-		        settings: {
-		            slidesToShow: 1
-		        }
-	        },
-	        {
-		        breakpoint: 768,
+		        breakpoint: 520,
 		        settings: {
 		            slidesToShow: 1
 		        }
 	        }
 	    ]
+	});
+	$('.our-list').slick({
+	    slidesToShow: 3,
+	    dots: false,
+	    responsive: [
+	        {
+		        breakpoint: 1000,
+		        settings: {
+		            slidesToShow: 2
+		        }
+	        },
+	        {
+		        breakpoint: 700,
+		        settings: {
+		            slidesToShow: 1
+		        }
+	        }
+	    ]
+	});
+
+	$('.news-list').slick({
+	    slidesToShow: 1,
+	    dots: true
 	});
 
 
