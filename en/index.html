@@ -13,7 +13,7 @@
 
 	<link rel="stylesheet" href="../css/slick.css" media="all">
 	<link rel="stylesheet" href="../css/jquery.fancybox.min.css" media="all">
-	<link rel="stylesheet" href="../css/style.css?v7" media="all">
+	<link rel="stylesheet" href="../css/style.css?v8" media="all">
 </head>
 <body>
 	<div class="page-wrapper">
@@ -109,17 +109,23 @@
 					<div class="form main-form">
 						<div class="form-box">
 							<div class="form-box-container js-to-bottom-panel">
-								<a  href="#investment-popup" data-fancybox class="button white block big" onClick="_gaq.push(['_trackEvent', 'Knopka1', 'PrivateSale']);">Participate in private sale</a>
+								<a  href="#investment-popup" data-fancybox class="button white block big">
+									<button id="readyButton" type="submit" class="default_green_button checkout_last" data-locked="0" onClick="_gaq.push(['_trackEvent', 'Knopka1', 'PrivateSale']);">Participate in private sale</button>
+								</a>
 							</div>
 						</div>
 						<div class="form-box">
 							<div class="form-box-container">
-								<a href="https://d3ri2ictv4c1x9.cloudfront.net/PP_WP_e.pdf" title="" target="_blank" class="button white block" onClick="_gaq.push(['_trackEvent', 'Knopka2', 'WhitePaper']);">Whitepaper</a>
+								<a href="https://d3ri2ictv4c1x9.cloudfront.net/PP_WP_e.pdf" title="" target="_blank" class="button white block">
+									<button id="readyButton" type="submit" class="default_green_button checkout_last" data-locked="0" onClick="_gaq.push(['_trackEvent', 'Knopka2', 'WhitePaper']);">Whitepaper</button>
+								</a>
 							</div>
 						</div>
 						<div class="form-box">
 							<div class="form-box-container">
-								<a href="https://pprotocol.org/" target="_blank" class="button white block">MVP</a>
+								<a href="https://pprotocol.org/" target="_blank" class="button white block">
+									<button id="readyButton" type="submit" class="default_green_button checkout_last" data-locked="0" onClick="_gaq.push(['_trackEvent', 'Knopka3', 'Github']);">MVP</button>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -378,49 +384,49 @@
 							<div class="team-slider team-list">
 								<div class="team-slide">
 									<div class="team-image">
-										<img src="images/team-image-7.jpg" alt="">
+										<img src="/images/team-image-7.jpg" alt="">
 									</div>
 									<a href="https://www.linkedin.com/in/reuben-godfrey/" target="_blank" class="team-icon"><img src="images/linked-icon.png" alt=""></a>
 									<div class="team-name">Reuben Godfrey</div>
 								</div>
 								<div class="team-slide">
 									<div class="team-image">
-										<img src="images/team-image-8.jpg" alt="">
+										<img src="/images/team-image-8.jpg" alt="">
 									</div>
 									<a href="https://www.linkedin.com/in/adnanah/" target="_blank" class="team-icon"><img src="images/linked-icon.png" alt=""></a>
 									<div class="team-name">Adnan Ahmed Siddiqui</div>
 								</div>
 								<div class="team-slide">
 									<div class="team-image">
-										<img src="images/team-image-9.jpg" alt="">
+										<img src="/images/team-image-9.jpg" alt="">
 									</div>
 									<a href="https://www.linkedin.com/in/kilian-peter-krings-827298121/" target="_blank" class="team-icon"><img src="images/linked-icon.png" alt=""></a>
 									<div class="team-name">Kilian Peter Krings</div>
 								</div>
 								<div class="team-slide">
 									<div class="team-image">
-										<img src="images/team-image-10.jpg" alt="">
+										<img src="/images/team-image-10.jpg" alt="">
 									</div>
 									<a href="https://www.linkedin.com/in/deepanshubhatt/" target="_blank" class="team-icon"><img src="images/linked-icon.png" alt=""></a>
 									<div class="team-name">Deepanshu Bhatt</div>
 								</div>
 								<div class="team-slide">
 									<div class="team-image">
-										<img src="images/team-image-11.jpg" alt="">
+										<img src="/images/team-image-11.jpg" alt="">
 									</div>
 									<a href="https://www.linkedin.com/in/vilniuscapital/" target="_blank" class="team-icon"><img src="images/linked-icon.png" alt=""></a>
 									<div class="team-name">Anthony Johnson</div>
 								</div>
 								<div class="team-slide">
 									<div class="team-image">
-										<img src="images/team-image-12.jpg" alt="">
+										<img src="/images/team-image-12.jpg" alt="">
 									</div>
 									<a href="https://www.linkedin.com/in/jonnyfianu/" target="_blank" class="team-icon"><img src="images/linked-icon.png" alt=""></a>
 									<div class="team-name">Jonathan Fianu</div>
 								</div>
 								<div class="team-slide">
 									<div class="team-image">
-										<img src="images/team-image-13.jpg" alt="">
+										<img src="/images/team-image-13.jpg" alt="">
 									</div>
 									<a href="https://www.linkedin.com/in/williambryant1/" target="_blank" class="team-icon"><img src="images/linked-icon.png" alt=""></a>
 									<div class="team-name">Will Bryant</div>
@@ -464,13 +470,13 @@
 						<div class="news-list">
 							<div class="news-list-box">
 								<div class="news-list-item big">
-									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');">
-										<iframe width="100%" height="100%" src="https://www.youtube.com/embed/IjEgbEW_VxI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');" style="background-image: url(http://img.youtube.com/vi/IjEgbEW_VxI/maxresdefault.jpg)">
+										<a class="video-button js-fancybox" data-fancybox href="https://youtu.be/IjEgbEW_VxI"></a>
 									</div>
 								</div>
 								<div class="news-list-item">
-									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');">
-										<iframe width="100%" height="100%" src="https://www.youtube.com/embed/gjZLQCthU5U&t=1s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');" style="background-image: url(http://img.youtube.com/vi/gjZLQCthU5U/0.jpg)">
+										<a class="video-button js-fancybox" data-fancybox href="https://youtu.be/gjZLQCthU5U"></a>
 									</div>
 									<div class="blog-content">
 										<div class="blog-title">16.07.2019</div>
@@ -480,8 +486,8 @@
 									</div>
 								</div>
 								<div class="news-list-item">
-									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');">
-										<iframe width="100%" height="100%" src="https://www.youtube.com/embed/OXQ9ffhJLiA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');" style="background-image: url(http://img.youtube.com/vi/OXQ9ffhJLiA/0.jpg)">
+										<a class="video-button js-fancybox" data-fancybox href="https://youtu.be/OXQ9ffhJLiA"></a>
 									</div>
 									<div class="blog-content">
 										<div class="blog-title">16.07.2019</div>
@@ -491,48 +497,8 @@
 									</div>
 								</div>
 								<div class="news-list-item">
-									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');">
-										<iframe width="100%" height="100%" src="https://www.youtube.com/embed/FAi71pqh_EU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									</div>
-									<div class="blog-content">
-										<div class="blog-title">16.07.2019</div>
-										<div class="blog-text">
-											Business tokenization protocol
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="news-list-box">
-								<div class="news-list-item big">
-									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');">
-										<iframe width="100%" height="100%" src="https://www.youtube.com/embed/wEjNV_Hu_cQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									</div>
-								</div>
-								<div class="news-list-item">
-									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');">
-										<iframe width="100%" height="100%" src="https://www.youtube.com/embed/1Xd082HFy00" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									</div>
-									<div class="blog-content">
-										<div class="blog-title">16.07.2019</div>
-										<div class="blog-text">
-											Business tokenization protocol
-										</div>
-									</div>
-								</div>
-								<div class="news-list-item">
-									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');">
-										<iframe width="100%" height="100%" src="https://www.youtube.com/embed/gjZLQCthU5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-									</div>
-									<div class="blog-content">
-										<div class="blog-title">16.07.2019</div>
-										<div class="blog-text">
-											Business tokenization protocol
-										</div>
-									</div>
-								</div>
-								<div class="news-list-item">
-									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');">
-										<iframe width="100%" height="100%" src="https://www.youtube.com/embed/gjZLQCthU5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');" style="background-image: url(http://img.youtube.com/vi/FAi71pqh_EU/0.jpg)">
+										<a class="video-button js-fancybox" data-fancybox href="https://youtu.be/FAi71pqh_EU"></a>
 									</div>
 									<div class="blog-content">
 										<div class="blog-title">16.07.2019</div>
@@ -544,13 +510,13 @@
 							</div>
 							<div class="news-list-box">
 								<div class="news-list-item big">
-									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');">
-										<iframe width="100%" height="100%" src="https://www.youtube.com/embed/gjZLQCthU5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');" style="background-image: url(http://img.youtube.com/vi/wEjNV_Hu_cQ/maxresdefault.jpg)">
+										<a class="video-button js-fancybox" data-fancybox href="https://youtu.be/wEjNV_Hu_cQ"></a>
 									</div>
 								</div>
 								<div class="news-list-item">
-									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');">
-										<iframe width="100%" height="100%" src="https://www.youtube.com/embed/gjZLQCthU5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');" style="background-image: url(http://img.youtube.com/vi/1Xd082HFy00/0.jpg)">
+										<a class="video-button js-fancybox" data-fancybox href="https://youtu.be/1Xd082HFy00"></a>
 									</div>
 									<div class="blog-content">
 										<div class="blog-title">16.07.2019</div>
@@ -560,8 +526,8 @@
 									</div>
 								</div>
 								<div class="news-list-item">
-									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');">
-										<iframe width="100%" height="100%" src="https://www.youtube.com/embed/gjZLQCthU5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');" style="background-image: url(http://img.youtube.com/vi/gjZLQCthU5U/0.jpg)">
+										<a class="video-button js-fancybox" data-fancybox href="https://youtu.be/gjZLQCthU5U"></a>
 									</div>
 									<div class="blog-content">
 										<div class="blog-title">16.07.2019</div>
@@ -571,8 +537,48 @@
 									</div>
 								</div>
 								<div class="news-list-item">
-									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');">
-										<iframe width="100%" height="100%" src="https://www.youtube.com/embed/gjZLQCthU5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');" style="background-image: url(http://img.youtube.com/vi/gjZLQCthU5U/0.jpg)">
+										<a class="video-button js-fancybox" data-fancybox href="https://youtu.be/gjZLQCthU5U"></a>
+									</div>
+									<div class="blog-content">
+										<div class="blog-title">16.07.2019</div>
+										<div class="blog-text">
+											Business tokenization protocol
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="news-list-box">
+								<div class="news-list-item big">
+									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');" style="background-image: url(http://img.youtube.com/vi/gjZLQCthU5U/maxresdefault.jpg)">
+										<a class="video-button js-fancybox" data-fancybox href="https://youtu.be/gjZLQCthU5U"></a>
+									</div>
+								</div>
+								<div class="news-list-item">
+									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');" style="background-image: url(http://img.youtube.com/vi/gjZLQCthU5U/0.jpg)">
+										<a class="video-button js-fancybox" data-fancybox href="https://youtu.be/gjZLQCthU5U"></a>
+									</div>
+									<div class="blog-content">
+										<div class="blog-title">16.07.2019</div>
+										<div class="blog-text">
+											Business tokenization protocol
+										</div>
+									</div>
+								</div>
+								<div class="news-list-item">
+									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');" style="background-image: url(http://img.youtube.com/vi/gjZLQCthU5U/0.jpg)">
+										<a class="video-button js-fancybox" data-fancybox href="https://youtu.be/gjZLQCthU5U"></a>
+									</div>
+									<div class="blog-content">
+										<div class="blog-title">16.07.2019</div>
+										<div class="blog-text">
+											Business tokenization protocol
+										</div>
+									</div>
+								</div>
+								<div class="news-list-item">
+									<div class="video" onClick="ga ('send', 'event', 'submit', 'Media-Button');" style="background-image: url(http://img.youtube.com/vi/gjZLQCthU5U/0.jpg)">
+										<a class="video-button js-fancybox" data-fancybox href="https://youtu.be/gjZLQCthU5U"></a>
 									</div>
 									<div class="blog-content">
 										<div class="blog-title">16.07.2019</div>
@@ -584,35 +590,6 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-			<div class="bottom-panel last">
-				<a href="https://t.me/pprotocol" class="bottom-panel-button"><span class="icon teleg-icon"></span></a>
-				<a href="/users/sign_in" class="button white moved-to-bottom-panel hide">Participate in private sale</a>
-			</div>
-		</div>
-		<div class="colored-bg box-wrapper our-wrapper">
-			<div class="page-scroller-wrapper">
-				<ul class="page-scroller">
-					<li class="page-scroller-item"><a href="#main" class="page-scroller-link">Home</a></li>
-					<li class="page-scroller-item"><a href="#about" class="page-scroller-link">About</a></li>
-					<li class="page-scroller-item"><a href="#protocol" class="page-scroller-link">Protocol</a></li>
-					<li class="page-scroller-item"><a href="#tokensale" class="page-scroller-link">Tokensale</a></li>
-					<li class="page-scroller-item"><a href="#roadmap" class="page-scroller-link">Roadmap</a></li>
-					<li class="page-scroller-item"><a href="#team" class="page-scroller-link">Ambassadors</a></li>
-					<li class="page-scroller-item"><a href="#news" class="page-scroller-link">Blog</a></li>
-					<li class="page-scroller-item"><a href="#social" class="page-scroller-link">Social</a></li>
-				</ul>
-			</div>
-			<div class="colored-bg-elements">
-				<div class="simple-line sl-1"></div>
-				<div class="simple-line sl-2"></div>
-				<div class="simple-line sl-3"></div>
-				<div class="simple-line sl-4"></div>
-				<div class="simple-line sl-5"></div>
-			</div>
-			<section class="box box-table our" id="our">
-				<div class="box-cell">
 					<a href="https://medium.com/@product.protocol" target="_blank" class="subbox-title">See our full blog</a>
 					<h2 class="box-title small padding">
 						FROM OUR BLOG
@@ -902,7 +879,7 @@
 	<script src="../js/slick.min.js"></script>
 	<script src="../js/alfaNavbar.min.js"></script>
 	<script src="../js/jquery.fancybox.min.js"></script>
-	<script src="../js/scripts.js?v4"></script>
+	<script src="../js/scripts.js?v5"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135733690-1"></script>

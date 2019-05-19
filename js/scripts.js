@@ -44,7 +44,7 @@ $(document).ready(function(){
 	});
 	$('.our-list').slick({
 	    slidesToShow: 3,
-	    dots: false,
+	    dots: true,
 	    responsive: [
 	        {
 		        breakpoint: 1000,
@@ -63,7 +63,7 @@ $(document).ready(function(){
 
 	$('.news-list').slick({
 	    slidesToShow: 1,
-	    dots: true
+	    dots: false
 	});
 
 
