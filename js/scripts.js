@@ -45,6 +45,7 @@ $(document).ready(function(){
 	$('.our-list').slick({
 	    slidesToShow: 3,
 	    dots: true,
+	    adaptiveHeight: true,
 	    responsive: [
 	        {
 		        breakpoint: 1000,
@@ -63,7 +64,8 @@ $(document).ready(function(){
 
 	$('.news-list').slick({
 	    slidesToShow: 1,
-	    dots: false
+	    dots: false,
+	    adaptiveHeight: true
 	});
 
 
