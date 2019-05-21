@@ -2285,7 +2285,7 @@ content: '';
 		transform: scale(.9)
 	}
 	.team-slider-wrapper{
-		padding: 15% 0 0;
+		padding: 20px 0 0;
 	}
 }
 @media (max-width: 1200px){
