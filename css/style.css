@@ -2122,14 +2122,16 @@ content: '';
 	background-color: #000;
 }
 .our-list-item-title{
-	position: absolute;
-    top: 22px;
-    right: 25px;
-    left: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    left: 10px;
     text-transform: uppercase;
     font-size: 16px;
     line-height: 20px;
     color: #fff;
+    padding: 15px;
+    background: rgba(0,0,0,.6);
 }
 .our-list-item-overlay{
 	display: block;
