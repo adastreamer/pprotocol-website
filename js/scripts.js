@@ -63,9 +63,17 @@ $(document).ready(function(){
 	});
 
 	$('.news-list').slick({
-	    slidesToShow: 1,
+	    slidesToShow: 2,
 	    dots: false,
-	    adaptiveHeight: true
+	    adaptiveHeight: true,
+	     responsive: [
+	        {
+		        breakpoint: 1000,
+		        settings: {
+		            slidesToShow: 1
+		        }
+	        }
+        ]
 	});
 
 
