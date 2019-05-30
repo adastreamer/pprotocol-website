@@ -1973,7 +1973,7 @@ content: '';
 	background-size: cover;
 }
 .news-list-wrapper{
-	padding-bottom: 30px;
+	padding-top: 50px;
 	padding-bottom: 5vw;
 }
 .news-list{
@@ -2125,6 +2125,7 @@ content: '';
 .our-list{
 	padding: 0 65px;
 }
+.our-list .our-list-item,
 .our-list-item{
 	padding: 0 35px;
 	height: 190px;
@@ -2389,9 +2390,6 @@ content: '';
 	.blog-title,
 	.blog-text{
 		font-size: 14px;
-	}
-	.news-list-item .video{
-		height: 94px;
 	}
 	.news-list-box{
 		padding: 30px 70px;
@@ -3407,9 +3405,9 @@ content: '';
 	animation: swim 2s infinite ease-in-out;
 }
 @keyframes swim{
-	0%{margin-top: -5px;}
-	50%{margin-top: 0px}
-	100%{margin-top: -5px}
+	0%{transform: translateY(-5px)}
+	50%{transform: translateY(0px)}
+	100%{transform: translateY(-5px)}
 }
 
 @keyframes lightsOpacity{
