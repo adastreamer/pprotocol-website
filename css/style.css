@@ -206,6 +206,9 @@ input{
 	appearance: none;
 	background: none;
 }
+button{
+	cursor: pointer;
+}
 button:focus{
 	outline: none;
 }
