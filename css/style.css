@@ -973,6 +973,16 @@ input[type="checkbox"]:checked{
     left: 0;
     bottom: 0;
 }
+
+.link-wrapper{
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    padding-top: 35px
+}
+.link-wrapper a{
+	color: inherit;
+}
 /* Common styles> */
 
 
@@ -2257,6 +2267,10 @@ content: '';
 	.socials-list{
 		right: -30px;
 	}
+	.link-wrapper{
+		position: relative;
+		right: -30px;
+	}
 
 	.roadmap .slick-arrow{
 		font-size: 20px;
@@ -2287,6 +2301,10 @@ content: '';
 		padding-right: 150px;
 	}
 	.socials-list{
+		right: -75px;
+	}
+	.link-wrapper{
+		position: relative;
 		right: -75px;
 	}
 
@@ -2543,6 +2561,9 @@ content: '';
 		padding-right: 10px;
 	}
 	.socials-list{
+		right: 0;
+	}
+	.link-wrapper{
 		right: 0;
 	}
 	.page-scroller-wrapper{
