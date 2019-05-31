@@ -991,9 +991,9 @@ input[type="checkbox"]:checked{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-right: 15px;
 }
 .coutries.fl-r{
+	margin-top: -18px;
 	margin-left: -370px;
 }
 .coutries-info {
