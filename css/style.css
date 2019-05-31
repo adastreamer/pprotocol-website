@@ -978,10 +978,30 @@ input[type="checkbox"]:checked{
     text-align: center;
     font-size: 24px;
     color: #fff;
-    padding-top: 35px
 }
 .link-wrapper a{
 	color: inherit;
+}
+
+.coutries{
+	float: right;
+    max-width: 330px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 15px;
+}
+.coutries.fl-r{
+	margin-left: -330px;
+}
+.coutries-info {
+    padding-right: 20px;
+    font-size: 16px;
+    text-align: left;
+    line-height: 20px;
+    font-weight: 400;
 }
 /* Common styles> */
 
@@ -1091,14 +1111,17 @@ header.box{
 	top: 10px;
 }
 
+.footer-wrapper{
+	background: #1d2242;
+}
 footer.box{
-	/*
-	color: #3e2062;
+	height: auto;
+	color: #fff;
 	min-height: 0;
 	text-align: center;
 	font: 32.01px 'Proxima Nova', 'Open Sans', Arial, Helvetica, sans-serif;
-	padding: 74px 0 64px;
-	*/
+	padding-top: 74px;
+	padding-bottom: 64px;
 }
 /* Header & Footer> */
 
@@ -2267,10 +2290,6 @@ content: '';
 	.socials-list{
 		right: -30px;
 	}
-	.link-wrapper{
-		position: relative;
-		right: -30px;
-	}
 
 	.roadmap .slick-arrow{
 		font-size: 20px;
@@ -2301,10 +2320,6 @@ content: '';
 		padding-right: 150px;
 	}
 	.socials-list{
-		right: -75px;
-	}
-	.link-wrapper{
-		position: relative;
 		right: -75px;
 	}
 
@@ -2563,9 +2578,6 @@ content: '';
 	.socials-list{
 		right: 0;
 	}
-	.link-wrapper{
-		right: 0;
-	}
 	.page-scroller-wrapper{
 		display: none;
 	}
@@ -2710,6 +2722,16 @@ content: '';
 	}
 	.news-list-item.big .video{
 		height: 310px;
+	}
+
+	.coutries.fl-r{
+		float: none;
+		margin: 0 auto 30px;
+		flex-direction: column;
+	}
+	.coutries-info{
+		padding: 0 0 15px;
+		text-align: center;
 	}
 }
 @media (max-width: 768px){
@@ -3119,8 +3141,9 @@ content: '';
 		margin-bottom: 120px;
 	}
 	footer.box{
-		padding: 64px 0 54px;
 		font-size: 30px;
+		padding-top: 60px;
+		padding-bottom: 54px;
 	}
 	.box-title-ann{
 		margin-bottom: 30px;
@@ -3221,8 +3244,9 @@ content: '';
 		text-align: center;
 	}
 	footer.box{
-		padding: 54px 0 44px;
 		font-size: 28px;
+		padding-top: 54px;
+		padding-bottom: 44px;
 	}
 	.page-scroller-item{
 		margin-top: 30px;
@@ -3322,7 +3346,8 @@ content: '';
 		font-size: 20px;
 	}
 	footer.box{
-		padding: 40px 0 36px;
+		padding-top: 40px;
+		padding-bottom: 36px;
 		font-size: 24px;
 	}
 	.protocol-image-wrapper{
