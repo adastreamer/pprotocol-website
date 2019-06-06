@@ -985,7 +985,7 @@ input[type="checkbox"]:checked{
 
 .coutries{
 	float: right;
-    max-width: 370px;
+    max-width: 380px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -993,8 +993,7 @@ input[type="checkbox"]:checked{
     justify-content: space-between;
 }
 .coutries.fl-r{
-	margin-top: -18px;
-	margin-left: -370px;
+	margin: -18px 0 -18px -370px;
 }
 .coutries-info {
     padding-right: 20px;
@@ -1122,6 +1121,7 @@ footer.box{
 	font: 32.01px 'Proxima Nova', 'Open Sans', Arial, Helvetica, sans-serif;
 	padding-top: 74px;
 	padding-bottom: 64px;
+	overflow: hidden;
 }
 /* Header & Footer> */
 
