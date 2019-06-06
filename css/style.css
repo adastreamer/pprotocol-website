@@ -963,7 +963,7 @@ input[type="checkbox"]:checked{
 }
 
 .dark-bg{
-	background-color: #1d2242;
+	background: #1d2242;
 }
 .box-bg-image{
     background-repeat: no-repeat;
