@@ -276,6 +276,12 @@ button:focus{
 	background-image: url('../images/icons/kr-icon.png');
 	background-size: 27px 18px;
 }
+.ch-icon{
+	width: 27px;
+	height: 18px;
+	background-image: url('../images/icons/ch-icon.png');
+	background-size: 27px 18px;
+}
 .lin-icon{
 	width: 23px;
 	height: 22px;
