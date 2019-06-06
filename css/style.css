@@ -2290,9 +2290,11 @@ content: '';
 	.team,
 	.news,
 	.tokensale,
-	.dark-bg,
 	.social{
 		padding-right: 60px;
+	}
+	.dark-bg{
+		border-right: 60px solid #1d2242;
 	}
 	.socials-list{
 		right: -30px;
@@ -2323,9 +2325,11 @@ content: '';
 	.team,
 	.news,
 	.tokensale,
-	.dark-bg,
 	.social{
 		padding-right: 150px;
+	}
+	.dark-bg{
+		border-right: 150px solid #1d2242;
 	}
 	.socials-list{
 		right: -75px;
@@ -2492,9 +2496,11 @@ content: '';
 	.team,
 	.news,
 	.tokensale,
-	.dark-bg,
 	.social{
 		padding-right: 10px;
+	}
+	.dark-bg{
+		border-right: 10px solid #1d2242;
 	}
 	.socials-list{
 		right: -70px;
@@ -2581,9 +2587,11 @@ content: '';
 	.partners, 
 	.team, 
 	.news, 
-	.dark-bg,
 	.social{
 		padding-right: 10px;
+	}
+	.dark-bg{
+		border-right: 10px solid #1d2242;
 	}
 	.socials-list{
 		right: 0;
@@ -2767,9 +2775,11 @@ content: '';
 	.protocol,
 	.team, 
 	.news, 
-	.dark-bg,
 	.social{
 		padding-right: 10px;
+	}
+	.dark-bg{
+		border-right: 10px solid #1d2242;
 	}
 	.socials-list{
 		right: 0;
