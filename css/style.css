@@ -2748,6 +2748,11 @@ content: '';
 		padding: 0 0 15px;
 		text-align: center;
 	}
+
+	.box-bg-image{
+	    background-image: url(/images/roadmap-image-m.jpg) !important;
+	    min-height: 2168px;
+	}
 }
 @media (max-width: 900px){
 	.news-list-item{
