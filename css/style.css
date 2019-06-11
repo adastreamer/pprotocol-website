@@ -987,6 +987,9 @@ input[type="checkbox"]:checked{
     left: 0;
     bottom: 0;
 }
+.box-bg-image img{
+	display: none;
+}
 
 .link-wrapper{
     text-align: center;
@@ -2750,8 +2753,15 @@ content: '';
 	}
 
 	.box-bg-image{
-	    background-image: url(/images/roadmap-image-m.jpg) !important;
-	    min-height: 2168px;
+        background-color: #203469;
+	}
+	.box-bg-image img{
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
+	}
+	.dark-bg{
+		border-color: #203469;
 	}
 }
 @media (max-width: 900px){
