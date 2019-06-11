@@ -2753,15 +2753,19 @@ content: '';
 	}
 
 	.box-bg-image{
-        background-color: #203469;
+        background: #203469 !important;
+        position: static;
 	}
 	.box-bg-image img{
 		display: block;
 		margin: 0 auto;
 		max-width: 100%;
 	}
+	.box-bg-image ~ .box{
+		display: none;
+	}
 	.dark-bg{
-		border-color: #203469;
+		border-color: #203469 !important;
 	}
 }
 @media (max-width: 900px){
