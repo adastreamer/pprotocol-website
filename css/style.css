@@ -364,6 +364,9 @@ button:focus{
 .button.big.white{
     box-shadow: 0 0 20px 2px rgb(151, 220, 255), -12px 8px 20px -5px rgb(158, 9, 223);
 }
+.button.big.white.ornot{
+	padding: 9px 12px 10px;
+}
 .button.white{
 	background: #fff;
 	color: #000;
