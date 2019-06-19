@@ -994,8 +994,23 @@ input[type="checkbox"]:checked{
     left: 0;
     bottom: 0;
 }
+.ledger-wrapper .box-bg-image{
+	background-size: cover;
+}
 .box-bg-image img{
 	display: none;
+}
+
+.ledger-wrppaer{}
+.ledger{
+	height: auto;
+	min-height: 0;
+	padding: 0;
+	max-width: 100%;
+}
+.box-image{
+	display: block;
+	width: 100%;
 }
 
 .link-wrapper{
@@ -1025,6 +1040,11 @@ input[type="checkbox"]:checked{
     text-align: left;
     line-height: 20px;
     font-weight: 400;
+}
+
+
+.ledger-wrapper{
+
 }
 /* Common styles> */
 
