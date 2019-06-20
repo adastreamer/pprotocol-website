@@ -1977,12 +1977,16 @@ content: '';
 	max-width: 100%;
 	max-height: 100%;
 }
+.team-list .team-image{
+	width: 120px;
+	height: 120px;
+}
 .team-icon{
     display: flex;
     justify-content: center;
     height: 0;
     width: 120px;
-    margin: -25px auto 22px;
+    margin: -38px auto 30px;
     position: relative;
 }
 .team-icon img{
@@ -1995,17 +1999,18 @@ content: '';
 }
 .team-name{
 	text-align: center;
-	font: 32px/40px 'PFDinDisplayPro Medium', 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
+	font: 26px/30px 'PFDinDisplayPro Bold', 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
+	margin-bottom: 5px;
 }
 .team-type{
 	text-align: center;
 	color: #6a6a6a;
 	min-height: 48px;
-	font: 28px/20px 'PFDinDisplayPro Medium', 'Open Sans', Arial, Helvetica, sans-serif;
+	font: 22px/26px 'PFDinDisplayPro Light', 'Open Sans', Arial, Helvetica, sans-serif;
 }
 .team-description{
 	color: #6a6a6a;
-	font: 28px/27px 'PFDinDisplayPro Light', 'Open Sans', Arial, Helvetica, sans-serif;
+	font: 24px/26px 'PFDinDisplayPro Light', 'Open Sans', Arial, Helvetica, sans-serif;
 	text-align: justify;
 }
 .team .slick-arrow{
@@ -2043,10 +2048,6 @@ content: '';
 	margin-left: 0;
 	margin-right: 0;
 	margin-top: 0;
-}
-.team-list .team-type{
-	font-size: 24px;
-	line-height: 22px;
 }
 .team-list .team-description{
 	font-size: 20px;
@@ -3250,11 +3251,6 @@ content: '';
 	    margin: -30px 0;
 	}
 
-	.team-image{
-		width: 100px;
-		height: 100px;
-		margin-bottom: 12px;
-	}
 	.team-name{
 		font-size: 26px;
 		height: 30px;
