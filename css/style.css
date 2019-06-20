@@ -1003,14 +1003,7 @@ input[type="checkbox"]:checked{
 
 .ledger-wrppaer{}
 .ledger{
-	height: auto;
-	min-height: 0;
-	padding: 0;
-	max-width: 100%;
-}
-.box-image{
-	display: block;
-	width: 100%;
+	
 }
 
 .link-wrapper{
@@ -1947,6 +1940,10 @@ content: '';
 	width: 1282px;
 	max-width: 100%;
 	margin: 0 auto;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .team-slide{
 	float: left;
@@ -2036,12 +2033,7 @@ content: '';
 	border-left-width: 20px;
 }
 
-.team-list{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-.team-list .team-slide{
+.team-slide{
 	flex-basis: 33%;
 	padding: 0 15px;
 	box-sizing: border-box;
@@ -2049,7 +2041,7 @@ content: '';
 	margin-right: 0;
 	margin-top: 0;
 }
-.team-list .team-description{
+.team-description{
 	font-size: 20px;
 	line-height: 20px;
 }
@@ -2811,7 +2803,7 @@ content: '';
 	body .news-list-item .video{
 		margin-right: 0;
 		width: 100%;
-		margin: 0 0 10px 0;
+		margin: 0 0 20px 0;
 		height: 100px;
 	}
 	.news-list-item.big .video{
@@ -2862,7 +2854,6 @@ content: '';
 	
 	.subbox-title{
 		float: none;
-		margin: 0 75px 30px;
 		display: block;
 	}
 	.video-button{
@@ -2996,12 +2987,7 @@ content: '';
 	}
 
 	.team-slide{
-		margin: 36px 0;
-	}
-	.team-list .team-slide{
-		margin-left: 0;
-		margin-right: 0;
-		flex-basis: 48%;
+		flex-basis: 50%;
 	}
 
 
@@ -3014,13 +3000,36 @@ content: '';
 		margin-bottom: 25px;
 		text-align: left;
 		width: auto;
+		padding: 0;
 	}
+	.our-list{
+		padding: 0 30px;
+	}
+	.our-list .our-list-item{
+		padding: 0 15px;
+	} 
 	.news-list-item .video{
 		margin: 0 25px 0 0;
 		width: 200px;
 	}
 	.news-list-wrapper .slick-dots{
 		bottom: 28px;
+	}
+	.news-wrapper .slick-arrow{
+		height: 46px;
+	}
+	.news-wrapper .slick-next{
+		right: -2px;
+	}
+	.news-wrapper .slick-prev{
+		left: -2px;
+	}
+	.box-title.padding{
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.subbox-title{
+		padding: 0 40px 30px;
 	}
 }
 @media (max-width: 600px){
@@ -3161,15 +3170,8 @@ content: '';
 	    margin: -150px -100px -100px -156px;
 	}
 
-	.team-slide{
-		margin-bottom: 0;
-	}
 	.team-list .team-slide{
-		margin-top: 40px;
 		flex-basis: 100%;
-	}
-	.team-list .team-slide:first-child{
-		margin: 0;
 	}
 
 	body .partners-list-item{
@@ -3179,6 +3181,8 @@ content: '';
 	body .partners-list{
 		margin-bottom: -20px;
 	}
+
+
 }
 @media (max-width: 400px){
 	body .main-image-wrapper{
@@ -3249,11 +3253,6 @@ content: '';
 	.graph{
 	    transform: scale(.75);
 	    margin: -30px 0;
-	}
-
-	.team-name{
-		font-size: 26px;
-		height: 30px;
 	}
 
 	.blog-text{
