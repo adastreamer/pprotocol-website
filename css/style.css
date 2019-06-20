@@ -91,8 +91,7 @@ textarea:focus, input:focus{
 
 /* <Service styles */
 body{
-	font: 23.37px 'PFDinDisplayPro Bold', 'Open Sans', Arial, Helvetica, sans-serif;
-	font: 23px 'PF Din Display Pro', 'Open Sans', Arial, Helvetica, sans-serif;
+	font: 20px 'PF Din Display Pro', 'Open Sans', Arial, Helvetica, sans-serif;
 	color: #3e2062;
 	min-width: 300px;
 	background: #fff;
@@ -115,23 +114,24 @@ strong{
 }
 .first-title{
 	text-transform: uppercase;
-	font-size: 45.83px;
-	line-height: 55px;
-	margin-bottom: 82px;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 60px;
 	font-family: 'PFDinDisplayPro Bold', 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
 }
 .box-title{
 	color: #3e2062;
-	opacity: .1;
+	opacity: .2;
 	font-size: 147px;
 	font-size: 144px;
 	line-height: 120px;
 	letter-spacing: 1px;
-	font: 150px/120px 'PFDinDisplayPro Bold', 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
+	font: 100px/1 'PFDinDisplayPro Bold', 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
 }
 .box-title.small{
 	font-size: 64px;
 	line-height: 62px;
+	opacity: .5;
 }
 .box-title.padding{
 	padding: 0 100px 30px;
@@ -144,7 +144,7 @@ strong{
 	padding: 10px 0 0 0;
 	margin-bottom: 37px;
 	letter-spacing: .05px;
-	font-family: 'PFDinDisplayPro Bold', 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
+	font: 24px 'PFDinDisplayPro Bold', 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
 }
 .box-title-ann.mtop{
 	margin-top: 20px;
@@ -877,10 +877,10 @@ input[type="checkbox"]:checked{
 	text-align: right;
 	position: relative;
 	color: #3e2062;
-	font-size: 24px;
 	font-family: 'PFDinDisplayPro Light', 'Open Sans', Arial, Helvetica, sans-serif;
 	padding-right: 30px;
-	height: 29px;
+	height: 26px;
+	padding-top: 3px;
 }
 .page-scroller-link::after{
 	content: '';
@@ -1008,7 +1008,6 @@ input[type="checkbox"]:checked{
 
 .link-wrapper{
     text-align: center;
-    font-size: 24px;
     color: #fff;
 }
 .link-wrapper a{
@@ -1082,7 +1081,7 @@ header.box{
 	display: block;
 	color: #fff;
 	border-radius: 40px;
-    padding: 5px 15px 6px;
+    padding: 6px 15px 5px;
 	text-align: center;
 	transition: all .2s;
 }
@@ -1158,7 +1157,6 @@ footer.box{
 	color: #fff;
 	min-height: 0;
 	text-align: center;
-	font: 32.01px 'Proxima Nova', 'Open Sans', Arial, Helvetica, sans-serif;
 	padding-top: 74px;
 	padding-bottom: 64px;
 	overflow: hidden;
@@ -1979,31 +1977,32 @@ content: '';
 	height: 120px;
 }
 .team-icon{
-    display: flex;
-    justify-content: center;
-    height: 0;
-    width: 120px;
-    margin: -38px auto 30px;
+    display: block;
+    margin: -44px auto 10px;
     position: relative;
+    width: 38px;
+    height: 38px;
+    background: #6475b9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 .team-icon img{
     position: static;
     background: #fff;
-    padding: 3px;
-    border-radius: 2px;
-    width: 24px;
-    height: 24px;
+    display: block;
 }
 .team-name{
 	text-align: center;
-	font: 26px/30px 'PFDinDisplayPro Bold', 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
+	font: 22px/26px 'PFDinDisplayPro Bold', 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
 	margin-bottom: 5px;
 }
 .team-type{
 	text-align: center;
 	color: #6a6a6a;
 	min-height: 48px;
-	font: 22px/26px 'PFDinDisplayPro Light', 'Open Sans', Arial, Helvetica, sans-serif;
+	font: 20px/22px 'PFDinDisplayPro Light', 'Open Sans', Arial, Helvetica, sans-serif;
 }
 .team-description{
 	color: #6a6a6a;
@@ -2435,10 +2434,6 @@ content: '';
 		border-left-color: #3e2062;
 	}
 
-	body .box-title{
-		font-size: 122px;
-		line-height: 1;
-	}
 	.box-title-ann{
 		font-size: 20px;
 	}
@@ -2699,9 +2694,6 @@ content: '';
 	}
 	.about .split-col:first-child{
 		margin-bottom: 40px;
-	}
-	body .box-title{
-		font-size: 100px;
 	}
 	.box-title-ann{
 		font-size: 18px;
@@ -3212,9 +3204,6 @@ content: '';
 	.box-cell{
 		padding: 6.5vh 0;
 	}
-	.box-title{
-		font-size: 136px;
-	}
 	.main-image-wrapper{
 		transform: scale(.9);
 	}
@@ -3268,9 +3257,6 @@ content: '';
 	}
 	.box-cell{
 		padding: 4.5vh 0;
-	}
-	.box-title{
-		font-size: 128px;
 	}
 	.main-image-wrapper{
 		transform: scale(.8);
@@ -3364,9 +3350,6 @@ content: '';
 	.box-cell{
 		padding: 2.5vh 0;
 	}
-	.box-title{
-		font-size: 122px;
-	}
 	.main-image-wrapper{
 		top: 5%;
 		transform: scale(.7);
@@ -3459,9 +3442,6 @@ content: '';
 	}
 	.box-cell{
 		padding: 30px 0;
-	}
-	.box-title{
-		font-size: 114px;
 	}
 	.box.nav-wrapper{
 		min-height: 0;
