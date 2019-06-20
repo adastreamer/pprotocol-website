@@ -1001,9 +1001,8 @@ input[type="checkbox"]:checked{
 	display: none;
 }
 
-.ledger-wrppaer{}
-.ledger{
-	
+.ledger .box-title{
+	opacity: .3;
 }
 
 .link-wrapper{
