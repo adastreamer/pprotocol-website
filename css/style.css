@@ -1931,6 +1931,11 @@ content: '';
 
 
 /* <Team */
+.team-wrapper{}
+.team-wrapper .box{
+	min-height: 0;
+	height: auto;
+}
 .team .box-cell{
 	vertical-align: middle;
 }
@@ -1955,8 +1960,8 @@ content: '';
 	right: 39px;
 }
 .team-image{
-	width: 120px;
-	height: 120px;
+	width: 160px;
+	height: 160px;
 	border-radius: 50%;
 	overflow: hidden;
 	position: relative;
@@ -1974,11 +1979,10 @@ content: '';
 }
 .team-icon{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     height: 0;
-    align-items: flex-end;
     width: 120px;
-    margin: -22px auto 22px;
+    margin: -25px auto 22px;
     position: relative;
 }
 .team-icon img{
@@ -1986,6 +1990,8 @@ content: '';
     background: #fff;
     padding: 3px;
     border-radius: 2px;
+    width: 24px;
+    height: 24px;
 }
 .team-name{
 	text-align: center;
