@@ -1946,7 +1946,7 @@ content: '';
 	float: left;
 	position: relative;
 	box-sizing: border-box;
-	margin: 20px 60px;
+	margin: 0 60px 20px;
 }
 .team-social{
 	position: absolute;
