@@ -3286,20 +3286,6 @@ content: '';
 	.partners-list-item{
 		margin-bottom: 100px;
 	}
-	.team-image{
-		margin-bottom: 15px;
-	}
-	.team-name{
-		font-size: 30px;
-	}
-	.team-type{
-		font-size: 26px;
-	}
-	.team-description{
-		font-size: 24px;
-		line-height: 24px;
-		text-align: center;
-	}
 	footer.box{
 		font-size: 28px;
 		padding-top: 54px;
@@ -3339,10 +3325,6 @@ content: '';
 	.graph{
 	    transform: scale(.65);
 	    margin: -50px 0;
-	}
-
-	.team-image{
-		margin-bottom: 0px;
 	}
 }
 @media (max-height: 740px){
@@ -3385,19 +3367,6 @@ content: '';
 	}
 	.partners-list-item{
 		margin: 0 0 40px 0;
-	}
-	.team-name{
-		font-size: 26px;
-	}
-	.team-type{
-		min-height: 0;
-		margin-bottom: 8px;
-	}
-	.team-type{
-		font-size: 22px;
-	}
-	.team-description{
-		font-size: 20px;
 	}
 	footer.box{
 		padding-top: 40px;
