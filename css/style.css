@@ -1999,9 +1999,9 @@ content: '';
 	font: 22px/26px 'PFDinDisplayPro Bold', 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
 }
 .team-type{
-	text-align: center;
-	color: #6a6a6a;
-	font: 18px/22px 'PFDinDisplayPro Light', 'Open Sans', Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #6a6a6a;
+    font: italic 16px/20px 'PFDinDisplayPro Light', 'Open Sans', Arial, Helvetica, sans-serif;
 }
 .team-description{
 	color: #6a6a6a;
