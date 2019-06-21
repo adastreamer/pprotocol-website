@@ -1977,7 +1977,7 @@ content: '';
 }
 .team-icon{
     display: block;
-    margin: -44px auto 10px;
+    margin: -44px auto 0;
     position: relative;
     width: 38px;
     height: 38px;
@@ -1999,7 +1999,7 @@ content: '';
 .team-type{
 	text-align: center;
 	color: #6a6a6a;
-	font: 20px/22px 'PFDinDisplayPro Light', 'Open Sans', Arial, Helvetica, sans-serif;
+	font: 18px/22px 'PFDinDisplayPro Light', 'Open Sans', Arial, Helvetica, sans-serif;
 }
 .team-description{
 	color: #6a6a6a;
