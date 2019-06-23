@@ -265,4 +265,13 @@ $(document).ready(function(){
 		});
 		return false;
 	});
+
+
+	// Faq
+	$('.faq-quest').on('click', function(){
+		var faqItem = $(this).closest('.faq-list-item');
+
+		faqItem.toggleClass('open');
+		faqItem.find('.faq-answer').slideToggle('slow');
+	})
 });
