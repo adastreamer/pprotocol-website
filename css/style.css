@@ -1009,7 +1009,6 @@ input[type="checkbox"]:checked{
 
 .link-wrapper{
     text-align: center;
-    color: #fff;
 }
 .link-wrapper a{
 	color: inherit;
@@ -1150,7 +1149,6 @@ header.box{
 }
 footer.box{
 	height: auto;
-	color: #fff;
 	min-height: 0;
 	text-align: center;
 	font-size: 30px;
