@@ -757,16 +757,18 @@ input[type="checkbox"]:checked{
 .blot-12{
 	top: 0;
 	right: 0;
-	width: 633px;
-	height: 443px;
-	background: url('../images/figures/blot-11.png') center no-repeat;
+	width: 569px;
+	height: 362px;
+	background: url('../images/figures/blot-12.png') center no-repeat;
+	background-size: contain;
 }
 .blot-13{
 	top: 0;
 	left: 0;
-	width: 360px;
-	height: 420px;
-	background: url('../images/figures/blot-12.png') center no-repeat;
+	width: 380px;
+	height: 266px;
+	background: url('../images/figures/blot-13.png') center no-repeat;
+	background-size: contain;
 }
 .rect{
 	position: absolute;
@@ -2964,7 +2966,7 @@ content: '';
 	}
 	body .partners-list-item{
 		width: 50%;
-		margin-bottom: 80px;
+		margin-bottom: 40px;
 	}
 
 	.bottom-panel-button:nth-child(1){
@@ -3259,6 +3261,7 @@ content: '';
 
 	body .partners-list-item{
 		width: 320px;
+		height: 140px;
 		margin-bottom: 20px;
 	}
 	body .partners-list{
