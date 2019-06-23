@@ -144,7 +144,7 @@ strong{
 	padding: 10px 0 0 0;
 	margin-bottom: 37px;
 	letter-spacing: .05px;
-	font: 24px 'PFDinDisplayPro Bold', 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
+	font: 22px 'PFDinDisplayPro Bold', 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
 }
 .box-title-ann.mtop{
 	margin-top: 20px;
@@ -1370,8 +1370,7 @@ footer.box{
 	padding-right: 85px;
 }
 .about p{
-    font-family: 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
-    line-height: 28px;
+    font: 16px/24px 'PFDinDisplayPro Regular', 'Open Sans', Arial, Helvetica, sans-serif;
     padding-top: 14px;
     letter-spacing: 1.5px;
     word-spacing: -2px;
