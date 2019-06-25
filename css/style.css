@@ -1171,6 +1171,8 @@ footer.box{
 	padding-top: 50px;
 	padding-bottom: 40px;
 	overflow: hidden;
+    position: relative;
+    z-index: 23;
 }
 /* Header & Footer> */
 
