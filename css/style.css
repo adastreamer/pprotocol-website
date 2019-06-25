@@ -235,6 +235,7 @@ button:focus{
 .colored-bg.v2.token-inside{
 	background: url(../images/token-bg.jpg) center no-repeat;
 	background-size: cover;
+	background: #fff;
 }
 .colored-bg.v3{
 	background: url('../images/colored-image-3.png') center no-repeat;
