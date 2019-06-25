@@ -1068,8 +1068,8 @@ header.box{
 	left: 0;
 	margin: auto;
 }
-.logo-wrapper{
-	
+.logo-wrapper h1{
+	text-indent: -6666px;
 }
 .page-logo{
 	position: relative;
