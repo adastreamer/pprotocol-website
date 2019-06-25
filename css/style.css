@@ -777,7 +777,7 @@ input[type="checkbox"]:checked{
 	width: 226px;
 	height: 653px;
 	max-height: 75%;
-	background: url('../images/figures/blot-14.png') center no-repeat;
+	background: url('../images/figures/blot-14.png') right center no-repeat;
 	background-size: contain;
 }
 .blot-15{
@@ -786,7 +786,7 @@ input[type="checkbox"]:checked{
 	width: 226px;
 	height: 653px;
 	max-height: 75%;
-	background: url('../images/figures/blot-15.png') center no-repeat;
+	background: url('../images/figures/blot-15.png') 0 center no-repeat;
 	background-size: contain;
 }
 .rect{
