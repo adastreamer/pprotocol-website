@@ -1021,6 +1021,7 @@ input[type="checkbox"]:checked{
 	display: none;
 }
 
+.white-bg,
 .dark-bg{
 	background: #1d2242;
 }
@@ -2424,6 +2425,7 @@ content: '';
 	.social{
 		padding-right: 60px;
 	}
+	.white-bg,
 	.dark-bg{
 		border-right: 60px solid transparent;
 	}
@@ -2459,6 +2461,7 @@ content: '';
 	.social{
 		padding-right: 150px;
 	}
+	.white-bg,
 	.dark-bg{
 		border-right: 150px solid transparent;
 	}
@@ -2626,6 +2629,7 @@ content: '';
 	.social{
 		padding-right: 10px;
 	}
+	.white-bg,
 	.dark-bg{
 		border-right: 10px solid transparent;
 	}
@@ -2717,6 +2721,7 @@ content: '';
 	.social{
 		padding-right: 10px;
 	}
+	.white-bg,
 	.dark-bg{
 		border-right: 10px solid transparent;
 	}
@@ -2883,6 +2888,7 @@ content: '';
 	.ledger-wrapper .box-title{
 		
 	}
+	.white-bg,
 	.dark-bg{
 		border-color: transparent !important;
 	}
@@ -2929,6 +2935,7 @@ content: '';
 	.social{
 		padding-right: 10px;
 	}
+	.white-bg,
 	.dark-bg{
 		border-right: 10px solid transparent;
 	}
