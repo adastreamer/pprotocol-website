@@ -776,6 +776,7 @@ input[type="checkbox"]:checked{
 	right: 0;
 	width: 226px;
 	height: 653px;
+	max-height: 75%;
 	background: url('../images/figures/blot-14.png') center no-repeat;
 	background-size: contain;
 }
@@ -784,6 +785,7 @@ input[type="checkbox"]:checked{
 	left: 0;
 	width: 226px;
 	height: 653px;
+	max-height: 75%;
 	background: url('../images/figures/blot-15.png') center no-repeat;
 	background-size: contain;
 }
@@ -2427,9 +2429,11 @@ content: '';
 	.social{
 		padding-right: 60px;
 	}
-	.white-bg,
 	.dark-bg{
 		border-right: 60px solid transparent;
+	}
+	.white-bg .box-bg-image{
+		right: 60px;
 	}
 	.socials-list{
 		right: -30px;
@@ -2463,9 +2467,11 @@ content: '';
 	.social{
 		padding-right: 150px;
 	}
-	.white-bg,
 	.dark-bg{
 		border-right: 150px solid transparent;
+	}
+	.white-bg .box-bg-image{
+		right: 150px;
 	}
 	.socials-list{
 		right: -75px;
@@ -2631,9 +2637,11 @@ content: '';
 	.social{
 		padding-right: 10px;
 	}
-	.white-bg,
 	.dark-bg{
 		border-right: 10px solid transparent;
+	}
+	.white-bg .box-bg-image{
+		right: 10px;
 	}
 	.socials-list{
 		right: -70px;
@@ -2723,9 +2731,11 @@ content: '';
 	.social{
 		padding-right: 10px;
 	}
-	.white-bg,
 	.dark-bg{
 		border-right: 10px solid transparent;
+	}
+	.white-bg .box-bg-image{
+		right: 10px;
 	}
 	.socials-list{
 		right: 0;
@@ -2937,9 +2947,11 @@ content: '';
 	.social{
 		padding-right: 10px;
 	}
-	.white-bg,
 	.dark-bg{
 		border-right: 10px solid transparent;
+	}
+	.white-bg .box-bg-image{
+		right: 60px;
 	}
 	.socials-list{
 		right: 0;
