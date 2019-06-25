@@ -771,6 +771,22 @@ input[type="checkbox"]:checked{
 	background: url('../images/figures/blot-13.png') center no-repeat;
 	background-size: contain;
 }
+.blot-14{
+	top: 0;
+	right: 0;
+	width: 226px;
+	height: 653px;
+	background: url('../images/figures/blot-14.png') center no-repeat;
+	background-size: contain;
+}
+.blot-15{
+	top: 0;
+	left: 0;
+	width: 226px;
+	height: 653px;
+	background: url('../images/figures/blot-15.png') center no-repeat;
+	background-size: contain;
+}
 .rect{
 	position: absolute;
 }
