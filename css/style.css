@@ -1021,7 +1021,9 @@ input[type="checkbox"]:checked{
 	display: none;
 }
 
-.white-bg,
+.white-bg{
+	background: #fff;
+}
 .dark-bg{
 	background: #1d2242;
 }
