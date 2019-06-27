@@ -2689,6 +2689,7 @@ content: '';
 	}
 	.nav-wrapper{
 		top: 33px;
+		z-index: 100;
 	}
 	.header-nav-list-item{
 		margin: 0;

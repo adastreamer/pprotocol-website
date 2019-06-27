@@ -1,28 +1,30 @@
 $(document).ready(function(){
 	// Slick slider
-	$('.roadmap-slider').slick({
-		speed: 300,
-		slidesToShow: 3,
-		adaptiveHeight: true,
-		responsive: [
-	    {
-	      breakpoint: 1200,
-	      settings: {
-	        slidesToShow: 2,
-	        slidesToScroll: 1
-	      }
-	    },
-	    {
-	      breakpoint: 768,
-	      settings: {
-	        slidesToShow: 1,
-	        slidesToScroll: 1
-	      }
-	    }]
-	});
-	$('.roadmap-slider').on('afterChange', function(){
-		$('.roadmap-container > .first-title').html($('.roadmap-slide.slick-current .first-title').html())
-	})
+	if($('.roadmap-slider').length){
+		$('.roadmap-slider').slick({
+			speed: 300,
+			slidesToShow: 3,
+			adaptiveHeight: true,
+			responsive: [
+		    {
+		      breakpoint: 1200,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 1
+		      }
+		    },
+		    {
+		      breakpoint: 768,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }]
+		});
+		$('.roadmap-slider').on('afterChange', function(){
+			$('.roadmap-container > .first-title').html($('.roadmap-slide.slick-current .first-title').html())
+		})
+	}
 
 	$('._team-slider').slick({
 	    slidesToShow: 3,
@@ -42,81 +44,95 @@ $(document).ready(function(){
 	        }
 	    ]
 	});
-	$('.our-list').slick({
-	    slidesToShow: 3,
-	    dots: true,
-	    adaptiveHeight: true,
-	    responsive: [
-	        {
-		        breakpoint: 1000,
-		        settings: {
-		            slidesToShow: 2
+	if($('.our-list').length){
+		$('.our-list').slick({
+		    slidesToShow: 3,
+		    dots: true,
+		    adaptiveHeight: true,
+		    responsive: [
+		        {
+			        breakpoint: 1000,
+			        settings: {
+			            slidesToShow: 2
+			        }
+		        },
+		        {
+			        breakpoint: 700,
+			        settings: {
+			            slidesToShow: 1
+			        }
 		        }
-	        },
-	        {
-		        breakpoint: 700,
-		        settings: {
-		            slidesToShow: 1
-		        }
-	        }
-	    ]
-	});
+		    ]
+		});
+	}
 
-	$('.news-list').slick({
-	    slidesToShow: 2,
-	    dots: false,
-	    adaptiveHeight: true,
-	     responsive: [
-	        {
-		        breakpoint: 1000,
-		        settings: {
-		            slidesToShow: 1
+	if($('.news-list').length){
+		$('.news-list').slick({
+		    slidesToShow: 2,
+		    dots: false,
+		    adaptiveHeight: true,
+		     responsive: [
+		        {
+			        breakpoint: 1000,
+			        settings: {
+			            slidesToShow: 1
+			        }
 		        }
-	        }
-        ]
-	});
+	        ]
+		});
+	}
 
 
 	// Scroll menu
-	$('.page-scroller').alfaNavbar({ type: 'dotted'});
-
-	fixPagerScroller = function(){
-		var blockSpace = $('.nav-wrapper.box').offset().left + 10;
-		$('.page-scroller-wrapper').css({'right':blockSpace+'px'})
-	}
-	fixPagerScroller();
-	$(window).resize(function(){
+	if($('.page-scroller').length){
+		$('.page-scroller').alfaNavbar({ type: 'dotted'});
+		
+		fixPagerScroller = function(){
+			var blockSpace = $('.nav-wrapper.box').offset().left + 10;
+			$('.page-scroller-wrapper').css({'right':blockSpace+'px'})
+		}
 		fixPagerScroller();
-	})
+		$(window).resize(function(){
+			fixPagerScroller();
+		})
+	}
 
 
 	// Header mobile button
-	$('.header-nav-button').on('click', function(){
-		$(this).toggleClass('open')
-	})
+	if($('.header-nav-button').length){
+		$('.header-nav-button').on('click', function(){
+			$(this).toggleClass('open')
+		})
+	}
 
 
 	// Header dropdown button
-	$('.dropdown-button').on('click', function(e){
-		e.preventDefault();
+	if($('.dropdown-button').length){
+		$('.dropdown-button').on('click', function(e){
+			e.preventDefault();
 
-		$(this).parent().find('.dropdown').slideToggle('fast')
-	})
+			$(this).parent().find('.dropdown').slideToggle('fast')
+		})
+	}
 
 
 	// Show button when scrolled
-	$(document).scroll(function(){
-		var scrollPath = $('#protocol').offset().top - $('#protocol').height()/2;
-		if($(document).scrollTop() >= scrollPath){
-			$('.bottom-panel .moved-to-bottom-panel').removeClass('hide')
-		}else{
-			$('.bottom-panel .moved-to-bottom-panel').addClass('hide')
-		}
-	})
+	if($('#protocol').length){
+		$(document).scroll(function(){
+			var scrollPath = $('#protocol').offset().top - $('#protocol').height()/2;
+			if($(document).scrollTop() >= scrollPath){
+				$('.bottom-panel .moved-to-bottom-panel').removeClass('hide')
+			}else{
+				$('.bottom-panel .moved-to-bottom-panel').addClass('hide')
+			}
+		})
+	}
 
 
 	// Fancybox
-	$('.js-fancybox').fancybox();
+	if($('.js-fancybox').length){
+		$('.js-fancybox').fancybox();
+	}
 
 
 	// Включаем и отключаем анимации при скроле
@@ -231,47 +247,51 @@ $(document).ready(function(){
 
 
 	// Обработка формы
-	var connectPopupFormSelector = '.submit-popup';
-	var submitRequestButtonSelector = '.submit-request';
-	var $connectPopupForm = $(connectPopupFormSelector);
-	var $submitRequestButton = $(submitRequestButtonSelector);
-	var submitRequestInProgress = false;
-	var submitRequestButtonLoadingMessage = "Loading...";
-	$connectPopupForm.submit(function(e){
-		e.preventDefault();
-		if (submitRequestInProgress == true) return false;
-		submitRequestInProgress = true;
-		var submitButtonValue = $submitRequestButton.val();
-		$submitRequestButton.val(submitRequestButtonLoadingMessage);
-		var $form = $(this);
-		var formDom = this;
-		var data = $form.serialize();
-		$.ajax({
-			url: $form.attr('action'),
-			method: $form.attr('method'),
-			data: data,
-			success: function(data){
-				alert("Success! Thank you!");
-				formDom.reset();
-				submitRequestInProgress = false;
-				$submitRequestButton.val(submitButtonValue);
-				$.fancybox.close();
-			},
-			error: function(err){
-				alert("Error, try again later!");
-				submitRequestInProgress = false;
-				$submitRequestButton.val(submitButtonValue);
-			}
+	if($('.submit-popup').length){
+		var connectPopupFormSelector = '.submit-popup';
+		var submitRequestButtonSelector = '.submit-request';
+		var $connectPopupForm = $(connectPopupFormSelector);
+		var $submitRequestButton = $(submitRequestButtonSelector);
+		var submitRequestInProgress = false;
+		var submitRequestButtonLoadingMessage = "Loading...";
+		$connectPopupForm.submit(function(e){
+			e.preventDefault();
+			if (submitRequestInProgress == true) return false;
+			submitRequestInProgress = true;
+			var submitButtonValue = $submitRequestButton.val();
+			$submitRequestButton.val(submitRequestButtonLoadingMessage);
+			var $form = $(this);
+			var formDom = this;
+			var data = $form.serialize();
+			$.ajax({
+				url: $form.attr('action'),
+				method: $form.attr('method'),
+				data: data,
+				success: function(data){
+					alert("Success! Thank you!");
+					formDom.reset();
+					submitRequestInProgress = false;
+					$submitRequestButton.val(submitButtonValue);
+					$.fancybox.close();
+				},
+				error: function(err){
+					alert("Error, try again later!");
+					submitRequestInProgress = false;
+					$submitRequestButton.val(submitButtonValue);
+				}
+			});
+			return false;
 		});
-		return false;
-	});
+	}
 
 
 	// Faq
-	$('.faq-quest').on('click', function(){
-		var faqItem = $(this).closest('.faq-list-item');
+	if($('.faq-quest').length){
+		$('.faq-quest').on('click', function(){
+			var faqItem = $(this).closest('.faq-list-item');
 
-		faqItem.toggleClass('open');
-		faqItem.find('.faq-answer').slideToggle('slow');
-	})
+			faqItem.toggleClass('open');
+			faqItem.find('.faq-answer').slideToggle('slow');
+		})
+	}
 });
