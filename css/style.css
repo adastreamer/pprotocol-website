@@ -2699,6 +2699,8 @@ content: '';
 	.header-nav-list-item:first-child{
 		border: none;
 	}
+	.header-nav-list-item a.button,
+	.header-nav-list-item a.button.white,
 	.header-nav-list-item a.dropdown-button,
 	.header-nav-list-item a{
 		color: #000;
@@ -2710,7 +2712,11 @@ content: '';
 		min-width: 0;
 		margin: 0;
 		white-space: nowrap;
+		box-shadow: none;
 	}
+	.header-nav-list-item a.button:hover,
+	.header-nav-list-item a.button.white:hover,
+	.header-nav-list-item a.dropdown-button:hover,
 	.header-nav-list-item a:hover{
 		background: #f9f9f9;
 	}
