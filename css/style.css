@@ -2878,13 +2878,12 @@ content: '';
 	}
 
 	.box-bg-image{
-        background: #203469 !important;
         position: static;
 	}
 	.box-bg-image img{
 		display: block;
 		margin: 0 auto;
-		max-width: 100%;
+		width: 100%;
 	}
 	.box-bg-image ~ .box{
 		display: none;
