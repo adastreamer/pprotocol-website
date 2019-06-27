@@ -2318,8 +2318,8 @@ content: '';
 	width: 33.33%;
 	padding-top: 33%;
 	position: relative;
-	border-left: 1px solid rgba(255,255,255,.4);
-	border-top: 1px solid rgba(255,255,255,.4);
+	border-left: 1px solid #94589f;
+	border-top: 1px solid #94589f;
 	box-sizing: border-box;
 }
 .socials-list-item:nth-child(1),
