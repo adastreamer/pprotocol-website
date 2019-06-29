@@ -883,6 +883,11 @@ input[type="checkbox"]:checked{
 	top: 6vw;
 	right: 0;
 }
+.box-image{
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
 
 .page-scroller-wrapper{
 	position: fixed;
