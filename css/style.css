@@ -1096,6 +1096,15 @@ input[type="checkbox"]:checked{
 .mobile-show{
 	display: none;
 }
+
+.tokensale-images{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.tokensale-images img{
+	max-width: 48%;
+}
 /* Common styles> */
 
 
@@ -3127,6 +3136,22 @@ content: '';
 	}
 	.top-gradient-bg .blot-10{
 		top: -141px;
+	}
+	.blot-12{
+		width: 275px;
+		height: 181px;
+	}
+	.blot-13{
+		width: 190px;
+		height: 133px;
+	}
+	.blot-14{
+		width: 113px;
+		height: 325px;
+	}
+	.blot-15{
+		width: 113px;
+		height: 325px;
 	}
 
 	.team-slide{
