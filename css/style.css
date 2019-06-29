@@ -1092,6 +1092,10 @@ input[type="checkbox"]:checked{
     line-height: 20px;
     font-weight: 400;
 }
+
+.mobile-show{
+	display: none;
+}
 /* Common styles> */
 
 
@@ -3169,6 +3173,13 @@ content: '';
 	}
 	.subbox-title{
 		padding: 0 40px 30px;
+	}
+
+	.mobile-show{
+		display: block;
+	}
+	.mobile-hide{
+		display: none;
 	}
 }
 @media (max-width: 600px){
