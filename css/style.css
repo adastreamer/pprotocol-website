@@ -796,7 +796,7 @@ input[type="checkbox"]:checked{
 	top: 0;
 	right: 0;
 	left: 0;
-	padding-top: 25%;
+	padding-top: 16%;
 	background: url('../images/figures/bg-image-1.png') center 0 no-repeat;
 	background-size: contain;
 }
