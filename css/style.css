@@ -789,6 +789,17 @@ input[type="checkbox"]:checked{
 	background: url('../images/figures/blot-15.png') 0 center no-repeat;
 	background-size: contain;
 }
+.bg-image{
+	position: absolute;
+}
+.bg-image-1{
+	top: 0;
+	right: 0;
+	left: 0;
+	padding-top: 25%;
+	background: url('../images/figures/bg-image-1.png') 0 center no-repeat;
+	background-size: contain;
+}
 .rect{
 	position: absolute;
 }
