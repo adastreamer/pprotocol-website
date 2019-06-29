@@ -1103,7 +1103,7 @@ input[type="checkbox"]:checked{
 	justify-content: space-between;
 }
 .tokensale-images img{
-	max-width: 48%;
+	max-width: 45%;
 }
 /* Common styles> */
 
@@ -3205,6 +3205,13 @@ content: '';
 	}
 	.mobile-hide{
 		display: none;
+	}
+
+	.tokensale-images{
+		display: block;
+	}
+	.tokensale-images img{
+		margin: 35px 0;
 	}
 }
 @media (max-width: 600px){
