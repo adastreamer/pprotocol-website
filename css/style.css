@@ -3214,6 +3214,9 @@ content: '';
 		margin: 50px auto;
 		max-width: 100%;
 	}
+	.tokensale-images img:first-child{
+		margin-top: 0;
+	}
 }
 @media (max-width: 600px){
 	.protocol .box-cell{
