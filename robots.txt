@@ -1,2 +1,3 @@
 User-agent: *
 Host: https://pprotocol.io
+Sitemap: https://pprotocol.io/sitemap.xml
