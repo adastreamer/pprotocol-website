@@ -464,8 +464,8 @@ textarea{}
 	content: '';
 	position: absolute;
 	top: 100%;
-	left: -3px;
-	right: -3px;
+	left: -0;
+	right: -0;
 	border-top: 1px solid;
 	opacity: 0;
 	width: 0;
