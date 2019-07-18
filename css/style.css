@@ -677,6 +677,13 @@ textarea{}
 	max-width: 282px;
 	margin-top: 15px;
 }
+.main-content .button button,
+.main-content .button input{
+	cursor: pointer;
+	background: none;
+	border: none;
+	color: inherit;
+}
 .main-content .button-telegram{
     width: 50px;
     display: inline-block;
@@ -1215,6 +1222,7 @@ textarea{}
 	padding: 0 9px;
 }
 .blog-slide-image{
+	display: block;
 	height: 239px;
 	background-size: cover;
 	background-repeat: no-repeat;
