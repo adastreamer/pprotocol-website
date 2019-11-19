@@ -491,15 +491,7 @@ textarea{}
 	display: flex;
 	margin: 0;
 }
-.nav-lang-link::before{
-    content: '';
-    width: 14px;
-    height: 20px;
-    margin-right: -3px;
-    background: url(../images/arrow-white.png) center no-repeat;
-    order: 2;
-    transition: all .3s;
-}
+
 .nav-lang-flag{
 	width: 18px;
 	height: 13px;
