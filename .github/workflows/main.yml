@@ -15,6 +15,9 @@ jobs:
     - name: Install Open VPN
       run: sudo apt-get install openvpn
 
+    - name: Check CA_CRT
+      run: echo $CA_CRT
+
     - name: Connect-VPN
       uses: golfzaptw/action-connect-ovpn@master
       id: connect_vpn
