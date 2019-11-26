@@ -1,19 +1,16 @@
-name: DEPLOY
-
-on:
-  push:
-    branches:
-    - master
-
+name: remote ssh command
+on: [push]
 jobs:
-  deploy:
 
+  build:
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
-
-    - name: deploy the latest code
-      run: |
-        echo "${{ secrets.DEPLOYER_KEY }}" > deploy.key
-        chmod 600 deploy.key
-        ssh -i deploy.key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -J ubuntu@63.34.140.33 deployer@pprotocol.westeurope.cloudapp.azure.com 'whoami'
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: '63.34.140.33'
+        username: 'ubuntu'
+        key: ${{ secrets.DEPLOYER_KEY }}
+        port: 22
+        script: whoami
