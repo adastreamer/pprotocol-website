@@ -1,21 +1,16 @@
-name: DEPLOY
-
-on:
-  push:
-    branches:
-    - master
-
+name: remote ssh command
+on: [push]
 jobs:
-  deploy:
 
+  build:
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
-
-    - name: deploy the latest code
-      run: |
-        echo '${{ secrets.DEPLOYER_KEY }}' > deploy.key
-        chmod 600 deploy.key
-        eval `ssh-agent`
-        ssh-add deploy.key
-        ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@ec2-34-251-192-94.eu-west-1.compute.amazonaws.com 'whoami'
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: 'ec2-34-251-192-94.eu-west-1.compute.amazonaws.com'
+        username: 'ubuntu'
+        key: ${{ secrets.DEPLOYER_KEY }}
+        port: 22
+        script: whoami
