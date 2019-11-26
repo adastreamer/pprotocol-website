@@ -20,7 +20,7 @@ jobs:
       id: connect_vpn
       with:
         PING_URL: ${{ secrets.HOST }}
-        FILE_OVPN: 'deploy.ovpn'
+        FILE_OVPN: '.github/vpn/deploy.ovpn'
         TLS_KEY: ${{ secrets.TLS_KEY }}
       env:
         CA_CRT: ${{ secrets.CA_CRT}}
