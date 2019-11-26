@@ -13,13 +13,4 @@ jobs:
     steps:
 
     - name: deploy the latest code
-      uses: appleboy/ssh-action@master
-      with:
-        host: ec2-34-251-192-94.eu-west-1.compute.amazonaws.com
-        username: ubuntu
-        key: ${{ secrets.DEPLOYER_KEY }}
-        port: 22
-        script: |
-          whoami
-          ls -al
-
+      run: echo '${{ secrets.DEPLOYER_KEY }}' > deploy.key && cat deploy.key
