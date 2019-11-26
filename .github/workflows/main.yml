@@ -13,4 +13,8 @@ jobs:
     steps:
 
     - name: deploy the latest code
-      run: echo '${{ secrets.DEPLOYER_KEY }}' > deploy.key && cat deploy.key
+      run: |
+        echo '${{ secrets.DEPLOYER_KEY }}' > deploy.key
+        chmod 600 deploy.key
+        eval `ssh-agent`
+        ssh-add deploy.key
