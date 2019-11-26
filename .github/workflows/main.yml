@@ -13,4 +13,4 @@ jobs:
         username: 'ubuntu'
         key: ${{ secrets.DEPLOYER_KEY }}
         port: 22
-        script: whoami
+        script: ssh -o StrictHostKeyChecking=no deployer@pprotocol.westeurope.cloudapp.azure.com 'cd pprotocol-account/public/static && GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_website" git pull origin master'
