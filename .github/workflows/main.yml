@@ -12,20 +12,14 @@ jobs:
 
     steps:
 
-    - name: Install Open VPN
-      run: sudo apt-get install openvpn
-
-    - name: Connect-VPN
-      uses: golfzaptw/action-connect-ovpn@master
-      id: connect_vpn
+    - name: deploy the latest code
+      uses: appleboy/ssh-action@master
       with:
-        PING_URL: ${{ secrets.HOST }}
-        FILE_OVPN: '.github/vpn/deploy.ovpn'
-        TLS_KEY: ${{ secrets.TLS_KEY }}
-      env:
-        CA_CRT: ${{ secrets.CA_CRT}}
-        USER_CRT: ${{ secrets.USER_CRT }}
-        USER_KEY: ${{ secrets.USER_KEY }}
+        host: ec2-34-251-192-94.eu-west-1.compute.amazonaws.com
+        username: ubuntu
+        key: ${{ secrets.DEPLOYER_KEY }}
+        port: 22
+        script: |
+          whoami
+          ls -al
 
-    - name: Check Connect VPN
-      run: echo ${{ steps.connect_vpn.outputs.STATUS }}
