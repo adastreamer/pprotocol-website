@@ -1,16 +1,21 @@
-name: remote ssh command
-on: [push]
-jobs:
+name: DEPLOY
 
-  build:
-    name: Build
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  deploy:
+
     runs-on: ubuntu-latest
+
     steps:
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@master
-      with:
-        host: 'ec2-34-251-192-94.eu-west-1.compute.amazonaws.com'
-        username: 'ubuntu'
-        key: ${{ secrets.DEPLOYER_KEY }}
-        port: 22
-        script: whoami
+
+    - name: deploy the latest code
+      run: |
+        echo '${{ secrets.DEPLOYER_KEY }}' > deploy.key
+        chmod 600 deploy.key
+        eval `ssh-agent`
+        ssh-add deploy.key
+        ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -J ubuntu@ec2-34-251-192-94.eu-west-1.compute.amazonaws.com deployer@pprotocol.westeurope.cloudapp.azure.com 'cd pprotocol-account/public/static && GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_website" git pull origin master'
