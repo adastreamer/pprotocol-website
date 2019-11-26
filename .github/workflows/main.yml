@@ -12,6 +12,7 @@ jobs:
 
     steps:
 
+    - uses: actions/checkout@v1
     - name: Install Open VPN
       run: sudo apt-get install openvpn
 
@@ -29,3 +30,8 @@ jobs:
 
     - name: Check Connect VPN
       run: echo ${{ steps.connect_vpn.outputs.STATUS }}
+
+    - name: kill vpn
+      if: always()
+      run: sudo killall openvpn
+
